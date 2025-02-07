@@ -1,0 +1,75 @@
+$wave-color: #f8f8f8;
+$wave-height: 100px;
+$animation-duration: 6s;
+
+.contact{
+    h2{
+        font-size: 40px;
+        margin: 20px 0 40px 0;
+    }
+    .info-contact, .wave-content{
+        b{
+            padding: 20px 0;
+        }
+        p{
+            
+            padding: 20px 0;
+        }
+    }
+    .info-contact{
+        margin-top: 100px;
+        height: 70vh;
+    }
+    .contact-form-container {
+        margin: 100px 0;
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+        
+        .form-group, .form-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-groups{
+            margin: 20px 0;
+        }
+        
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+        
+        input,
+        textarea {
+          padding: 10px;
+          border: none;
+          outline: none;
+          background-color: #f8f8f8;
+          padding: 20px;
+          border-radius: 4px;
+          font-size: 18px;
+        }
+        
+        input:focus,
+        textarea:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+        button {
+          grid-column: span 2;
+          padding: 15px 25px;
+          border: none;
+          background-color: var(--pre-color);
+          color: white;
+          border-radius: 4px;
+          width: 25%;
+          cursor: pointer;
+        }
+    
+      }
+}
