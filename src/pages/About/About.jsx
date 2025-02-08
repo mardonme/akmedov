@@ -209,39 +209,39 @@ const About = () => {
       </section>
 
       {/* Bizning Messiya */}
-      <section class="container section section--bg_1 mission">
-        <div class="section-top anim active">
-          <h2 class="title title--size_s">Bizning missiya</h2>
+      <section className="container section section--bg_1 mission">
+        <div className="section-top anim active">
+          <h2 className="title title--size_s">Bizning missiya</h2>
         </div>
-        <div class="mission-inner">
-          <div class="mission-image anim anim--image active">
+        <div className="mission-inner">
+          <div className="mission-image anim anim--image active">
             <picture>
               <img
-                class="lazyload"
+                className="lazyload"
                 src="https://nmedov.uz/wp-content/uploads/2023/02/106-3-1-1-768x1152.jpg"
                 width="628"
                 height="780"
               />
             </picture>
           </div>
-          <div class="mission-content">
-            <ul class="mission-list anim-parent anim-parent--right">
-              <li class="mission-list__item active">
-                <span class="mission-list__count">01</span>
-                <div class="mission-list__content">
+          <div className="mission-content">
+            <ul className="mission-list anim-parent anim-parent--right">
+              <li className="mission-list__item active">
+                <span className="mission-list__count">01</span>
+                <div className="mission-list__content">
                   Turli toifadagi sifatli va mazali oziq-ovqat mahsulotlarini
                   taqdim etish.
                 </div>
               </li>
-              <li class="mission-list__item active">
-                <span class="mission-list__count">02</span>
-                <div class="mission-list__content">
+              <li className="mission-list__item active">
+                <span className="mission-list__count">02</span>
+                <div className="mission-list__content">
                   Jahon maydonida dong taratgan brendga aylanish{" "}
                 </div>
               </li>
-              <li class="mission-list__item active">
-                <span class="mission-list__count">03</span>
-                <div class="mission-list__content">
+              <li className="mission-list__item active">
+                <span className="mission-list__count">03</span>
+                <div className="mission-list__content">
                   Dunyoni yanada lazzatli qilish
                 </div>
               </li>
@@ -263,21 +263,21 @@ const About = () => {
           </div>
           <div className="st-container__wrapper">
             <div className="st-container__wrapper__item">
-              <i class="bx bx-lg bx-trending-up"></i>{" "}
+              <i className="bx bx-lg bx-trending-up"></i>{" "}
               <p>
                 Har yili oziq-ovqat mahsulotlarini ishlab chiqarishga oid ikkita
                 yangi loyiha ishga tushiriladi
               </p>
             </div>
             <div className="st-container__wrapper__item">
-              <i class="bx bx-lg bx-trending-up"></i>{" "}
+              <i className="bx bx-lg bx-trending-up"></i>{" "}
               <p>
                 MDH mamlakatlari o‘rtasida oziq-ovqat mahsulotlarining eng yirik
                 va mashhur ta’minotchisi bo‘lishga intilish.
               </p>
             </div>
             <div className="st-container__wrapper__item">
-              <i class="bx bx-lg bx-trending-up"></i>{" "}
+              <i className="bx bx-lg bx-trending-up"></i>{" "}
               <p>
                 Xorijiy ekspertlar va o‘zaro manfaatli munosabatlarni
                 rivojlantirish muassasalari bilan ishlash tajribasi tufayli o‘z
