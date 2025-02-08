@@ -25,9 +25,9 @@ const About = () => {
   return (
     <>
       {/* First page */}
-      <section className="second">
-        <div className="container second-container">
-          <div className="second-container__left">
+      <section className="about">
+        <div className="container about-container">
+          <div className="about-container__left">
             <img data-aos="fade-up" src="/images/logo.png" alt="" />
             <h2 data-aos="fade-up">
               «Ахмедов» — это больше, чем просто десерты. Мы создаем мороженое и
@@ -37,7 +37,7 @@ const About = () => {
               <br />
             </h2>
           </div>
-          <div className="second-container__right" data-aos="fade-up">
+          <div className="about-container__right" data-aos="fade-up">
             <img src="/images/choco.png" alt="" />
           </div>
         </div>
@@ -48,28 +48,28 @@ const About = () => {
         <div className="container holding-container">
           <div className="holding-container__wrapper">
             <div className="holding-container__wrapper__item">
-              <h2>Rojok</h2>
+              <h2>Ахмедов</h2>
               <p>
                 ESTELLO, VALENCIA, MORELIA, KARAVAN va boshqa shokolad
                 konfetlarini ishlab chiqarish.
               </p>
             </div>
             <div className="holding-container__wrapper__item">
-              <h2>Rojok</h2>
+              <h2> Сытый Дом </h2>
               <p>
                 ESTELLO, VALENCIA, MORELIA, KARAVAN va boshqa shokolad
                 konfetlarini ishlab chiqarish.
               </p>
             </div>
             <div className="holding-container__wrapper__item">
-              <h2>Rojok</h2>
+              <h2>Бомбей</h2>
               <p>
                 ESTELLO, VALENCIA, MORELIA, KARAVAN va boshqa shokolad
                 konfetlarini ishlab chiqarish.
               </p>
             </div>
             <div className="holding-container__wrapper__item">
-              <h2>Rojok</h2>
+              <h2>Семейное</h2>
               <p>
                 «ESTELLO», «VALENCIA», «MORELIA», «KARAVAN» va boshqa shokolad
                 konfetlarini ishlab chiqarish.

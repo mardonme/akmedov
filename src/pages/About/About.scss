@@ -1,5 +1,5 @@
-.second {
-  margin-bottom: 120px;
+.about {
+  margin-bottom: 140px;
   &-container {
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,6 @@
       flex-direction: column;
       justify-content: center;
       gap: 20px;
-      // align-items: center;
       img {
         width: 330px;
         height: 110px;
@@ -23,7 +22,7 @@
     }
     &__right {
       display: flex;
-      width: 50%;
+      width: 100%;
       justify-content: center;
       align-items: center;
     }
@@ -212,9 +211,6 @@
     position: relative;
     overflow: hidden;
   
-    &--bg_1 {
-    //   background-color: #f9f9f9; // Orqa fon rangi
-    }
   
     .section-top {
       text-align: center;
@@ -331,6 +327,25 @@
           opacity: 1;
           transform: translateX(0);
         }
+      }
+    }
+  }
+
+  @media (max-width: 1040px) {
+    .about{
+      &-container {
+          flex-direction: column-reverse;
+          align-items: center;
+          &__left {
+            img{
+              display: none;
+            }
+          }
+        }
+    }
+    .holding{
+      &-container{
+        
       }
     }
   }

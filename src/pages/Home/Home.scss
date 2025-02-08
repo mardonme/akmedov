@@ -1,5 +1,5 @@
 .first {
-  // margin: 120px 0;
+  margin: 120px 0;
   &-container {
     display: flex;
     gap: 100px;
@@ -40,7 +40,7 @@
   }
 }
 .second {
-  margin: 120px 0;
+  // margin: 120px 0;
   &-container {
     display: flex;
     justify-content: space-between;
