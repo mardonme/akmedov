@@ -102,7 +102,7 @@ const Home = () => {
       <section className="third">
         <div className="container third-container">
           <div className="third-container__up">
-            <h1 data-aos="fade-right">{">15"} </h1>
+            <h1 data-aos="fade-right">{""} </h1>
             <h3 data-aos="fade-left">
               Более 15 ведущих брендов в Узбекистане
             </h3>
