@@ -12,14 +12,17 @@ const Catalog = () => {
               href="/images/ahmedov_katalog.pdf"
               download="ahmedov_katalog.pdf"
             >
-              Скачать <i className="bx bx-down-arrow-alt"></i>
+              Загрузка каталога <i className="bx bx-down-arrow-alt"></i>
             </a>
           </h1>
           <div data-aos="fade-up" className="catalog-container__wrapper">
             <h1 className="catalog-container__wrapper__title">Мороженое</h1>
-            <div data-aos="fade-up" className="catalog-container__wrapper__box maxs">
+            <div
+              data-aos="fade-up"
+              className="catalog-container__wrapper__box maxs"
+            >
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Кризи Макс
+                Kreasy max
               </h2>
               <div
                 data-aos="fade-up"
@@ -29,18 +32,18 @@ const Catalog = () => {
                   <img src="images/Kreasy.png" alt="iceCream" />
                   <p>Кризи Макс Ягода</p>
                 </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
+                {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy1.png" alt="iceCream" />
                   <p>Кризи Макс Ягода</p>
-                </Link>
+                </Link> */}
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy2.png" alt="iceCream" />
                   <p>Кризи Макс Ягода</p>
                 </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
+                {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy3.png" alt="iceCream" />
                   <p>Кризи Макс Ягода</p>
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
@@ -60,7 +63,7 @@ const Catalog = () => {
                   <img src="images/3.png" alt="iceCream" />
                   <p>Рожок Карамель</p>
                 </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
+                {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/4.png" alt="iceCream" />
                   <p>Рожок Вишня</p>
                 </Link>
@@ -79,7 +82,7 @@ const Catalog = () => {
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/pic7.png" alt="iceCream" />
                   <p>Рожок Вишня</p>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

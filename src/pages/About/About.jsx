@@ -28,7 +28,7 @@ const About = () => {
       <section className="second">
         <div className="second-box">
           <div className="second-box__left">
-            <h1>Слоган</h1>
+            <h1></h1>
             <h2 data-aos="fade-up">
               «Ахмедов» — это больше, чем просто десерты. Мы создаем мороженое и
               глазированные сырки с любовью к традициям и вниманием к деталям.
@@ -38,46 +38,30 @@ const About = () => {
             </h2>
           </div>
           <div className="second-box__right" data-aos="fade-up">
-            <img src="/images/choco.png" alt="" />
+            <img src="/images/abouthed.jpg" alt="" />
           </div>
         </div>
       </section>
 
-      {/* О холдинге */}
+      {/* О компании */}
       <section className="holding" data-aos="fade-up">
         <div className="box holding-box">
           <div className="holding-box__wrapper">
             <div className="holding-box__wrapper__item">
-              <h2>Ахмедов</h2>
-              <p>
-                Производство шоколадных конфет ESTELLO, VALENCIA, MORELIA,
-                KARAVAN и других.
-              </p>
+                <img src="images/logo.png" alt="" />
             </div>
             <div className="holding-box__wrapper__item">
-              <h2>Сытый Дом</h2>
-              <p>
-                Производство шоколадных конфет ESTELLO, VALENCIA, MORELIA,
-                KARAVAN и других.
-              </p>
+              <img src="images/kreasymaxabout.jpg" alt="" />
             </div>
             <div className="holding-box__wrapper__item">
-              <h2>Бомбей</h2>
-              <p>
-                Производство шоколадных конфет ESTELLO, VALENCIA, MORELIA,
-                KARAVAN и других.
-              </p>
+              <img src="images/СЫТЫЙ_ДОМ.jpg" alt="" />
             </div>
             <div className="holding-box__wrapper__item">
-              <h2>Семейное</h2>
-              <p>
-                Производство шоколадных конфет «ESTELLO», «VALENCIA», «MORELIA»,
-                «KARAVAN» и других.
-              </p>
+                <img src="images/Bombey.jpg" alt="" />
             </div>
           </div>
           <div className="holding-box__description">
-            <h1>О холдинге</h1>
+            <h1>О компании</h1>
             <p>
               {`"Группа компаний «АХМЕДОВ» является одним из лидеров в своей сфере на территории Узбекистана.`}
             </p>
@@ -93,7 +77,7 @@ const About = () => {
         <div className="box third-box">
           <div className="third-box__up">
             <h1 data-aos="fade-right">{""} </h1>
-            <h3 data-aos="fade-left">Более 15 ведущих брендов в Узбекистане</h3>
+            <h3 data-aos="fade-left"></h3>
           </div>
           <div className="third-box__down">
             <Slider {...settings1}>
@@ -101,13 +85,13 @@ const About = () => {
                 <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
+                <img src="/images/СЫТЫЙ_ДОМ.jpg" alt="Слайд 1" />
               </div>
               <div>
                 <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
+                <img src="/images/Bombey.jpg" alt="Слайд 1" />
               </div>
               <div>
                 <img src="/images/logo.png" alt="Слайд 1" />
@@ -162,7 +146,7 @@ const About = () => {
             <picture>
               <img
                 className="lazyload"
-                src="images/sirok4.png"
+                src="images/krizymaxabout.jpg"
               />
             </picture>
           </div>
@@ -171,20 +155,19 @@ const About = () => {
               <li className="mission-list__item active">
                 <span className="mission-list__count">01</span>
                 <div className="mission-list__content">
-                  Предоставление качественных и вкусных пищевых продуктов для
-                  различных категорий.
+                 Создавать натуральное и качественное мороженое, даря людям радость в каждом вкусе. 
                 </div>
               </li>
               <li className="mission-list__item active">
                 <span className="mission-list__count">02</span>
                 <div className="mission-list__content">
-                  Стать брендом с мировой известностью
+                Мы используем только отборное сырье и разрабатываем эксклюзивный ассортимент, чтобы каждый мог найти свое идеальное лакомство. 
                 </div>
               </li>
               <li className="mission-list__item active">
                 <span className="mission-list__count">03</span>
                 <div className="mission-list__content">
-                  Сделать мир еще более вкусным
+                  Наша цель – сочетать традиции и инновации, предлагая продукт, который радует и вдохновляет.
                 </div>
               </li>
             </ul>
@@ -193,7 +176,7 @@ const About = () => {
       </section>
 
       {/* Стратегия */}
-      <section className="st" data-aos="fade-up">
+      {/* <section className="st" data-aos="fade-up">
         <div className="box st-box">
           <div className="st-box__description">
             <h1>Стратегия, 2025</h1>
@@ -226,37 +209,32 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Партнеры Холдинга */}
       <section className="fourth">
         <div className="container fourth-container">
           <div className="fourth-container__title">
-            <h1 data-aos="fade-right">Наши партнеры</h1>
+            <h1 data-aos="fade-right">Наши партнеры </h1>
             <a href="/" data-aos="fade-left">
-              подробнее <Icons.rightArrow />
+            Подробнее <Icons.rightArrow />
             </a>
           </div>
           <div data-aos="fade-up" className="fourth-container__wrapper">
             <a href="/">
-              <img src="/images/logo.png" alt="Слайд 1" />
-              <p>www.akhmedov.uz</p>
+              <img src="/images/part.png" alt="Slide 1" />
             </a>
             <a href="/">
-              <img src="/images/logo.png" alt="Слайд 1" />
-              <p>www.akhmedov.uz</p>
+              <img src="/images/part1.png" alt="Slide 1" />
             </a>
             <a href="/">
-              <img src="/images/logo.png" alt="Слайд 1" />
-              <p>www.akhmedov.uz</p>
+              <img src="/images/part2.png" alt="Slide 1" />
             </a>
             <a href="/">
-              <img src="/images/logo.png" alt="Слайд 1" />
-              <p>www.akhmedov.uz</p>
+              <img src="/images/part3.png" alt="Slide 1" />
             </a>
             <a href="/">
-              <img src="/images/logo.png" alt="Слайд 1" />
-              <p>www.akhmedov.uz</p>
+              <img src="/images/part.jpg" alt="Slide 1" />
             </a>
           </div>
         </div>

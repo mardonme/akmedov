@@ -10,12 +10,12 @@ const Footer = () => {
           <div className="footer-menu__wrap">
             <div className="footer-menu">
               <a href="/about" className="footer-menu__name">
-                О холдинге
+              О компании
               </a>
               <ul className="footer-menu__list">
                 <li className="footer-menu__item">Наша миссия</li>
-                <li className="footer-menu__item">История холдинга</li>
-                <li className="footer-menu__item">Наши проекты</li>
+                <li className="footer-menu__item">История компании</li>
+                {/* <li className="footer-menu__item">Наши проекты</li> */}
               </ul>
               <a href="/about" className="footer-menu__name">
                 Контакты
@@ -27,14 +27,14 @@ const Footer = () => {
               </a>
               <ul className="footer-menu__list">
                 <li className="footer-menu__item">Наша миссия</li>
-                <li className="footer-menu__item">История холдинга</li>
+                <li className="footer-menu__item">История компании</li>
                 <li className="footer-menu__item">Наши проекты</li>
               </ul>
               <a href="/about" className="footer-menu__name">
                 Партнерство
               </a>
               <ul className="footer-menu__list">
-                <li className="footer-menu__item">Партнеры холдинга</li>
+                <li className="footer-menu__item">Партнеры компании</li>
                 <li className="footer-menu__item">Тендеры</li>
                 <li className="footer-menu__item">Условия продаж</li>
               </ul>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <li className="social__item">
                   <a
                     className="social-link"
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/akhmedovuzbekistan"
                     target="_blank"
                     rel="noopener nofollow"
                     aria-label="Наша страница в Instagram"
@@ -77,7 +77,7 @@ const Footer = () => {
                 <li className="social__item">
                   <a
                     className="social-link"
-                    href="https://www.t.me/"
+                    href="https://www.t.me/Farengiz"
                     target="_blank"
                     rel="noopener nofollow"
                     aria-label="Наша страница в Telegram"
