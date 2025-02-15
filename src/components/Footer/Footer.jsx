@@ -34,9 +34,9 @@ const Footer = () => {
                 Партнерство
               </a>
               <ul className="footer-menu__list">
-                <li className="footer-menu__item">Партнеры компании</li>
-                <li className="footer-menu__item">Тендеры</li>
-                <li className="footer-menu__item">Условия продаж</li>
+                {/* <li className="footer-menu__item">Партнеры компании</li> */}
+                {/* <li className="footer-menu__item">Тендеры</li> */}
+                {/* <li className="footer-menu__item">Условия продаж</li> */}
               </ul>
             </div>
             <div className="footer-menu"></div>

@@ -63,7 +63,7 @@ const About = () => {
           <div className="holding-box__description">
             <h1>О компании</h1>
             <p>
-              {`"Группа компаний «АХМЕДОВ» является одним из лидеров в своей сфере на территории Узбекистана.`}
+              {`Группа компаний «АХМЕДОВ» является одним из лидеров в своей сфере на территории Узбекистана.`}
             </p>
             {/* <a href="/">
         структура холдинга <Icons.rightArrow />
@@ -85,13 +85,13 @@ const About = () => {
                 <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
-                <img src="/images/СЫТЫЙ_ДОМ.jpg" alt="Слайд 1" />
+                <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
                 <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
-                <img src="/images/Bombey.jpg" alt="Слайд 1" />
+                <img src="/images/logo.png" alt="Слайд 1" />
               </div>
               <div>
                 <img src="/images/logo.png" alt="Слайд 1" />
@@ -216,24 +216,24 @@ const About = () => {
         <div className="container fourth-container">
           <div className="fourth-container__title">
             <h1 data-aos="fade-right">Наши партнеры </h1>
-            <a href="/" data-aos="fade-left">
+            {/* <a href="/" data-aos="fade-left">
             Подробнее <Icons.rightArrow />
-            </a>
+            </a> */}
           </div>
           <div data-aos="fade-up" className="fourth-container__wrapper">
-            <a href="/">
+            <a>
               <img src="/images/part.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part1.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part2.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part3.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part.jpg" alt="Slide 1" />
             </a>
           </div>

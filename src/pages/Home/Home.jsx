@@ -130,24 +130,21 @@ const Home = () => {
         <div className="container fourth-container">
           <div className="fourth-container__title">
             <h1 data-aos="fade-right">Наши партнеры </h1>
-            <a href="/" data-aos="fade-left">
-            Подробнее <Icons.rightArrow />
-            </a>
           </div>
           <div data-aos="fade-up" className="fourth-container__wrapper">
-            <a href="/">
+            <a>
               <img src="/images/part.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part1.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part2.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part3.png" alt="Slide 1" />
             </a>
-            <a href="/">
+            <a>
               <img src="/images/part.jpg" alt="Slide 1" />
             </a>
           </div>
