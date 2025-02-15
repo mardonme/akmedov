@@ -22,7 +22,7 @@ const Catalog = () => {
               className="catalog-container__wrapper__box maxs"
             >
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Kreasy max
+                Kreasy Max
               </h2>
               <div
                 data-aos="fade-up"
@@ -30,7 +30,7 @@ const Catalog = () => {
               >
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy.png" alt="iceCream" />
-                  <p>Кризи Макс Ягода</p>
+                  <p>Крези Макс лесные ягоды </p>
                 </Link>
                 {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy1.png" alt="iceCream" />
@@ -38,7 +38,7 @@ const Catalog = () => {
                 </Link> */}
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy2.png" alt="iceCream" />
-                  <p>Кризи Макс Ягода</p>
+                  <p>Крези Макс киви ананас</p>
                 </Link>
                 {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy3.png" alt="iceCream" />
@@ -48,20 +48,20 @@ const Catalog = () => {
             </div>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Рожок
+              Вафельные Рожки
               </h2>
               <div className="catalog-container__wrapper__box__row">
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/1.png" alt="iceCream" />
-                  <p>Рожок Карамель</p>
+                  <p>Вафельный рожок с карамельным топпингом</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/2.png" alt="iceCream" />
-                  <p>Рожок Вишня</p>
+                  <p>Вафельный рожок с вишней </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/3.png" alt="iceCream" />
-                  <p>Рожок Карамель</p>
+                  <p>Сытый Дом рожок с вишней</p>
                 </Link>
                 {/* <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/4.png" alt="iceCream" />
