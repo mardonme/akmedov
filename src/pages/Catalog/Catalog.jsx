@@ -22,7 +22,7 @@ const Catalog = () => {
               className="catalog-container__wrapper__box maxs"
             >
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Kreasy Max
+                Крези Макс
               </h2>
               <div
                 data-aos="fade-up"
@@ -32,23 +32,15 @@ const Catalog = () => {
                   <img src="images/Kreasy.png" alt="iceCream" />
                   <p>Крези Макс лесные ягоды </p>
                 </Link>
-                {/* <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/Kreasy1.png" alt="iceCream" />
-                  <p>Кризи Макс Ягода</p>
-                </Link> */}
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy2.png" alt="iceCream" />
                   <p>Крези Макс киви ананас</p>
                 </Link>
-                {/* <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/Kreasy3.png" alt="iceCream" />
-                  <p>Кризи Макс Ягода</p>
-                </Link> */}
               </div>
             </div>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
               <h2 className="catalog-container__wrapper__box__subtitle">
-              Вафельные Рожки
+                Вафельные Рожки
               </h2>
               <div className="catalog-container__wrapper__box__row">
                 <Link className="catalog-container__wrapper__box__row__item">
@@ -63,65 +55,48 @@ const Catalog = () => {
                   <img src="images/3.png" alt="iceCream" />
                   <p>Сытый Дом рожок с вишней</p>
                 </Link>
-                {/* <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/4.png" alt="iceCream" />
-                  <p>Рожок Вишня</p>
-                </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/5.png" alt="iceCream" />
-                  <p>Рожок Карамель</p>
-                </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/pic5.png" alt="iceCream" />
-                  <p>Рожок Карамель</p>
-                </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/pic6.png" alt="iceCream" />
-                  <p>Рожок Вишня</p>
-                </Link>
-                <Link className="catalog-container__wrapper__box__row__item">
-                  <img src="images/pic7.png" alt="iceCream" />
-                  <p>Рожок Вишня</p>
-                </Link> */}
               </div>
             </div>
           </div>
           <div data-aos="fade-up" className="catalog-container__wrapper">
-            <h2 className="catalog-container__wrapper__title">Сырки</h2>
+            <h2 className="catalog-container__wrapper__title">
+              {" "}
+              Творожные Сырки{" "}
+            </h2>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
               <h3 className="catalog-container__wrapper__box__subtitle">
-                Сырок Батончик
+              Творожные палочки
               </h3>
               <div className="catalog-container__wrapper__box__row maxs">
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в апельсиновой глазури </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки1.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в клубничной глазури</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки2.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в темной глазури</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки3.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в молочной глазури</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки4.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в карамельной глазури</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Сыробушки5.png" alt="iceCream" />
-                  <p>Сырок Карамель</p>
+                  <p>Творожные палочки в шоколадной глазури</p>
                 </Link>
               </div>
             </div>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Сырок Макси
+                Творожные сырки
               </h2>
               <div
                 data-aos="fade-up"
@@ -129,15 +104,15 @@ const Catalog = () => {
               >
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/SirokM.png" alt="iceCream" />
-                  <p>Сырок Пломбир</p>
+                  <p>Сырок творожный пломбир в молочной глазури </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/SirokM1.png" alt="iceCream" />
-                  <p>Сырок Пломбир</p>
+                  <p>Сырок творожный кофейный в молочной глазури </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/SirokM2.png" alt="iceCream" />
-                  <p>Сырок Пломбир</p>
+                  <p>Сырок творожный пломбир в темной глазури</p>
                 </Link>
               </div>
             </div>
