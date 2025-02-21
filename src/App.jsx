@@ -5,23 +5,25 @@ import Contact from "./pages/Contact/Contact";
 import Catalog from "./pages/Catalog/Catalog";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import NotFound from "./components/Notfound/Notfound";
 import 'boxicons'
 import "boxicons/css/boxicons.min.css";
 import "./App.css";
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Routes>
-          <Route path="/" index element={<Home />} />
+          {/* <Route path="/" index element={<Home />} />
           <Route path="/about" index element={<About />} />
           <Route path="/catalog" index element={<Catalog />} />
           <Route path="/contact" index element={<Contact />} />
-          <Route path="*" index element={<Navigate to="/" replace />} />
+          <Route path="*" index element={<Navigate to="/" replace />} /> */}
+          <Route path="*" index element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
