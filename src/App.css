@@ -39,7 +39,8 @@ html {
   flex-direction: column;
 }
 main {
-  /* margin: 120px 0 150px 0;   site ishlasa ochilish kk */
+  margin: 120px 0 150px 0;   
+  /* site ishlasa ochilish kk */
   flex: 1;
 }
 

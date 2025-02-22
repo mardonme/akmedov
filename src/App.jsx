@@ -15,12 +15,12 @@ function App() {
       {/* <Header /> */}
       <main>
         <Routes>
-          {/* <Route path="/" index element={<Home />} />
+          <Route path="/" index element={<Home />} />
           <Route path="/about" index element={<About />} />
           <Route path="/catalog" index element={<Catalog />} />
           <Route path="/contact" index element={<Contact />} />
-          <Route path="*" index element={<Navigate to="/" replace />} /> */}
-          <Route path="*" index element={<NotFound />} />
+          <Route path="*" index element={<Navigate to="/" replace />} />
+          {/* <Route path="*" index element={<NotFound />} /> */}
         </Routes>
       </main>
       {/* <Footer /> */}
