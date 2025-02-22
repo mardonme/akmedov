@@ -12,7 +12,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <main>
         <Routes>
           <Route path="/" index element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
           {/* <Route path="*" index element={<NotFound />} /> */}
         </Routes>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
