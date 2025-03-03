@@ -68,7 +68,7 @@ const Home = () => {
             <h1>Мороженое с семейной историей</h1>
             <p>
               Группа компаний под единым брендом «AKHMEDOV» является одним из
-              лидеров в пищевой промышленности Узбекистана.
+              пионеров и крупных производителей мороженого в Узбекистане
             </p>
             <a href="/">
               Подробнее <Icons.rightArrow />
@@ -125,7 +125,7 @@ const Home = () => {
           </Slider>
         </div>
       </section>
-      
+
       <section className="fourth">
         <div className="container fourth-container">
           <div className="fourth-container__title">
