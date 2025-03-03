@@ -538,7 +538,8 @@
       img{
         width: 100% !important;
         padding: 20px;
-        display: none;
+        min-width: 200px;
+        // display: none;
       }
     }
   }
@@ -603,6 +604,9 @@
         }
       }
   
+    }
+    .third{
+      display: none;
     }
 
   }
