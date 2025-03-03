@@ -111,6 +111,7 @@ const About = () => {
 
       {/* О компании */}
       <section className="holding" data-aos="fade-up">
+          <h1 className="abouth1">НАШИ БРЕНДЫ</h1>
         <div className="box holding-box">
           <div className="holding-box__wrapper">
             <div className="holding-box__wrapper__item">
