@@ -100,7 +100,7 @@ const Catalog = () => {
             </div>
             <div data-aos="fade-up" className="catalog-container__wrapper__box">
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Сырок творожные глазированный
+              Сырок творожный глазированный 
               </h2>
               <div
                 data-aos="fade-up"
@@ -108,19 +108,19 @@ const Catalog = () => {
               >
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Sirokoff1.png" alt="iceCream" />
-                  <p>Sirokoff </p>
+                  <p>Сырокофф </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Sirokoff2.png" alt="iceCream" />
-                  <p>Sirokoff </p>
+                  <p>Сырокофф </p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Sirokoff3.png" alt="iceCream" />
-                  <p>Sirokoff</p>
+                  <p>Сырокофф</p>
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Sirokoff4.png" alt="iceCream" />
-                  <p>Sirokoff</p>
+                  <p>Сырокофф</p>
                 </Link>
               </div>
             </div>
