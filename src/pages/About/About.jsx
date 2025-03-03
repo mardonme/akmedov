@@ -3,23 +3,61 @@ import Slider from "react-slick";
 import React, { useState } from "react";
 const About = () => {
   const settings1 = {
-    infinite: true, // Cheksiz aylanish
-    slidesToShow: 8, // Bir vaqtning o'zida 1 slayd
-    slidesToScroll: 1,
-    autoplay: true, // Avtomatik aylanish
+    infinite: true, // Бесконечное вращение
+    slidesToShow: 8, // Одновременно показывать 8 слайдов
+    autoplay: true, // Автоматическое вращение
     speed: 1000,
     autoplaySpeed: 1000,
-    cssEase: "linear",
+    cssEase: "linear", // Линейная анимация
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   const settings2 = {
     rtl: true,
-    infinite: true, // Cheksiz aylanish
-    slidesToShow: 8, // Bir vaqtning o'zida 1 slayd
-    slidesToScroll: 1,
-    autoplay: true, // Avtomatik aylanish
+    infinite: true, // Бесконечное вращение
+    slidesToShow: 8, // Одновременно показывать 8 слайдов
+    autoplay: true, // Автоматическое вращение
     speed: 1000,
     autoplaySpeed: 1000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 6,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 530,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   const historyData = [
@@ -102,65 +140,29 @@ const About = () => {
 
       {/* Бренды */}
       <section className="third">
-        <div className="box third-box">
-          <div className="third-box__up">
+        <div className="container third-container">
+          <div className="third-container__up">
             <h1 data-aos="fade-right">{""} </h1>
             <h3 data-aos="fade-left"></h3>
           </div>
-          <div className="third-box__down">
-            <Slider {...settings1}>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
+        </div>
+        <div data-aos="fade-up" className="third-container__down">
+          <Slider {...settings1}>
+            {/* Слайды */}
+            {Array.from({ length: 16 }).map((_, index) => (
+              <div className="img-box" key={index}>
+                <img src="/images/logo.png" alt={`Слайд ${index + 1}`} />
               </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
+            ))}
+          </Slider>
+          <Slider {...settings2}>
+            {/* Слайды */}
+            {Array.from({ length: 16 }).map((_, index) => (
+              <div className="img-box" key={index}>
+                <img src="/images/logo.png" alt={`Слайд ${index + 1}`} />
               </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-            </Slider>
-            <Slider {...settings2}>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-              <div>
-                <img src="/images/logo.png" alt="Слайд 1" />
-              </div>
-            </Slider>
-          </div>
+            ))}
+          </Slider>
         </div>
       </section>
 
