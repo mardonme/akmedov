@@ -81,6 +81,10 @@ const About = () => {
       year: "2020",
       text: "Расширен ассортимент 'Сытый Дом' – теперь бренд выпускает и мороженое.",
     },
+    {
+      year: "2023",
+      text: "Провели ребрендинг и объединили всё производство под новым, сильным именем — Akhmedov. Это не просто новое название, а символ качества, вкуса и доверия, которое мы заслуживали годами.",
+    },
   ];
   const [visibleIndex, setVisibleIndex] = useState(0);
   const interval = setInterval(() => {
@@ -111,7 +115,7 @@ const About = () => {
 
       {/* О компании */}
       <section className="holding" data-aos="fade-up">
-          <h1 className="abouth1">НАШИ БРЕНДЫ</h1>
+        <h1 className="abouth1">НАШИ БРЕНДЫ</h1>
         <div className="box holding-box">
           <div className="holding-box__wrapper">
             <div className="holding-box__wrapper__item">
@@ -128,7 +132,7 @@ const About = () => {
             </div>
           </div>
           <div className="holding-box__description">
-            <h1>О компании</h1>
+            <h1>наши бренды</h1>
             <p>
               {`Компания предлагает широкий ассортимент мороженого и глазированных сырков под четырьмя популярными брендами. Каждый бренд создан с любовью к качеству и уникальному вкусу`}
             </p>
