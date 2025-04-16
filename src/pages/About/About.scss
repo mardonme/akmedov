@@ -94,6 +94,7 @@
 
 
 .holding {
+  margin-bottom: 120px;
   .abouth1 {
     font-size: 3rem;
     font-weight: 700;
@@ -101,7 +102,6 @@
     margin-bottom: 30px;
     display: none;
   }
-    margin-bottom: 120px;
     &-box {
       display: flex;
       justify-content: space-between;
@@ -369,10 +369,35 @@
     // background: #f9f9f9;
   
     .history-title {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       font-size: 2rem;
       margin-bottom: 40px;
       color: #333;
+      padding: 0 10px;
     }
+    
+    .history-title h2 {
+      margin: 0;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .history-title a {
+      font-size: 1.2rem;
+      // color: #6C9C6C;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+    
+    .history-title i {
+      font-size: 1.4rem;
+      margin-left: 5px;
+    }
+    
   
     .timeline {
       display: flex;
@@ -602,7 +627,9 @@
         &__description{
           padding: 0 !important;
           h1{
+            display: none;
             font-size: 30px;
+            
           }
           p{
             font-size: 20px;

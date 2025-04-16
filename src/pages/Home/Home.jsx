@@ -1,7 +1,8 @@
 import "./Home.scss";
 import Icons from "../../utils/utils";
 import Slider from "react-slick";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 const handleSelect = (selectedIndex) => {
   setIndex(selectedIndex);
@@ -73,12 +74,12 @@ const Home = () => {
     autoplay: true,
     speed: 500,
     autoplaySpeed: 2500,
-    cssEase: "linear"
+    cssEase: "linear",
   };
   return (
     <>
       <section className="first">
-      <div className="slider-container">
+        <div className="slider-container">
           <Slider {...settings}>
             <div className="slider-item">
               <img src="images/banner1.JPG" alt="" />{" "}
@@ -101,6 +102,9 @@ const Home = () => {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
           </Slider>
+          <Link to="/catalog" className="modallink">
+            <p>Подробнее</p>
+          </Link>
         </div>
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           {Array.from({ length: 16 }).map((_, idx) => (

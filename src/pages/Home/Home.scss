@@ -1,4 +1,33 @@
 .slider-container{
+  position: relative;
+  .modallink {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6C9C6C, #B1A688);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .modallink:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modallink p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
   .slider-item{
     // background-image: url(/public/images/banner1.JPG);
     background-repeat: no-repeat;
@@ -255,6 +284,18 @@
 }
 
 @media (max-width: 740px) {
+  .slider-container{
+    .slider-item{
+
+    }
+    img{
+      width: 100vw;
+      height: 90vh;
+      margin: 0 auto;
+      object-fit: cover;
+
+    }
+  }
   .first {
     &-container {
       gap: 60px;

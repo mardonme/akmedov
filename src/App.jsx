@@ -5,6 +5,7 @@ import WhereToBuy from "./pages/WhereToBuy/WhereToBuy";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Catalog from "./pages/Catalog/Catalog";
+import History from "./pages/History/History"
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./components/Notfound/Notfound";
@@ -26,6 +27,7 @@ function App() {
             <Routes>
               <Route path="/" index element={<Home />} />
               <Route path="/made" index element={<Made />} />
+              <Route path="/history" index element={<History />} />
               <Route path="/buy" index element={<WhereToBuy />} />
               <Route path="/about" index element={<About />} />
               <Route path="/catalog" index element={<Catalog />} />
