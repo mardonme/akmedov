@@ -20,8 +20,10 @@ const Header = () => {
 
                 <nav className={`nav-links ${menuOpen ? "hidden" : ""}`}>
                     <NavLink to='/about'>О компании</NavLink>
+                    <NavLink to='/made'>Отдел производства</NavLink>
                     <NavLink to='/catalog'>Продукция</NavLink>
                     <NavLink to='/contact'>Контакты</NavLink>
+                    <NavLink to='/buy'>Где купить?</NavLink>
                 </nav>
 
                 <div className={`contact ${menuOpen ? "hidden" : ""}`}>

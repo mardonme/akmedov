@@ -1,5 +1,17 @@
+.slider-container{
+  .slider-item{
+    // background-image: url(/public/images/banner1.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .first {
-  // margin: 120px 0;
   &-container {
     display: flex;
     gap: 80px;
@@ -72,7 +84,7 @@
   }
 }
 .third {
-  margin: 100px 0;
+  // margin: 100px 0;
   &-container {
     &__up {
       display: flex;
@@ -153,14 +165,14 @@
         margin: 30px;
         width: 200px;
         img {
-          transition: filter .2s ease;
+          // transition: filter .2s ease;
           filter: grayscale(100%);
           width: 100%;
           height: 100px;
           object-fit: contain;
-          &:hover{
+          
             filter: grayscale(0);
-          }
+
         }
       }
     }

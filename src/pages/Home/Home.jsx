@@ -1,6 +1,11 @@
 import "./Home.scss";
 import Icons from "../../utils/utils";
 import Slider from "react-slick";
+import Carousel from 'react-bootstrap/Carousel';
+
+const handleSelect = (selectedIndex) => {
+  setIndex(selectedIndex);
+};
 
 const Home = () => {
   const settings1 = {
@@ -60,15 +65,66 @@ const Home = () => {
       },
     ],
   };
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2500,
+    cssEase: "linear"
+  };
   return (
     <>
       <section className="first">
+      <div className="slider-container">
+          <Slider {...settings}>
+            <div className="slider-item">
+              <img src="../../../public/images/banner1.JPG" alt="" />{" "}
+              {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
+            </div>
+            <div className="slider-item">
+              <img src="../../../public/images/banner2.JPG" alt="" />{" "}
+              {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
+            </div>
+            <div className="slider-item">
+              <img src="../../../public/images/banner3.JPG" alt="" />{" "}
+              {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
+            </div>
+            <div className="slider-item">
+              <img src="../../../public/images/banner4.JPG" alt="" />{" "}
+              {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
+            </div>
+          </Slider>
+        </div>
+        {/* <Carousel activeIndex={index} onSelect={handleSelect}>
+          {Array.from({ length: 16 }).map((_, idx) => (
+            <Carousel.Item key={idx}>
+              <div className="img-box" style={{ textAlign: "center" }}>
+                <img
+                  src="../../../public/images/banner1.JPG"
+                  alt={`Slide ${idx + 1}`}
+                  style={{ maxWidth: "100%", height: "auto" }}
+                />
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel> */}
+        {/* <img src="../../../public/images/banner1.JPG" alt="" />{" "} */}
         <div className="container first-container">
           <div className="first-container__left" data-aos="fade-right">
             <h1>Мороженое с семейной историей</h1>
             <p>
-              Группа компаний под единым брендом «AKHMEDOV» является одним из
-              пионеров и крупных производителей мороженого в Узбекистане
+              Добро пожаловать в компанию Akhmedov!
+              <br />
+              <br />
+              Мы делаем мороженое так как делали бы для своих: честно, вкусно и
+              с душой. Потому что для нас важно, что вы даете своей семье.
             </p>
             <a href="/about">
               Подробнее <Icons.rightArrow />

@@ -61,6 +61,28 @@ const Catalog = () => {
                 </Link>
               </div>
             </div>
+            <div data-aos="fade-up" className="catalog-container__wrapper__box">
+              <h2 className="catalog-container__wrapper__box__subtitle">
+                Эскимо на палочке
+              </h2>
+              <div className="catalog-container__wrapper__box__row">
+                <Link className="catalog-container__wrapper__box__row__item">
+                  <img src="images/eskimo1.png" alt="iceCream" />
+                  <p>Двухслойное эскимо в молочной глазури</p>
+                </Link>
+                <Link className="catalog-container__wrapper__box__row__item">
+                  <img src="images/eskimo2.png" alt="iceCream" />
+                  <p>Эскимо пломбир в шоколадной глазури</p>
+                </Link>
+                <Link className="catalog-container__wrapper__box__row__item">
+                  <img src="images/eskimo3.png" alt="iceCream" />
+                  <p>Эскимо кофейное в шоколадной глазури</p>
+                </Link>
+              </div>
+            </div>
+
+
+
           </div>
           <div data-aos="fade-up" className="catalog-container__wrapper">
             <h2 className="catalog-container__wrapper__title">

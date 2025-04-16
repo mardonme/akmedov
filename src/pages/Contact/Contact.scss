@@ -9,11 +9,17 @@ $animation-duration: 6s;
     }
     .info-contact, .wave-content{
         b{
+            font-size: 28px;
             padding: 20px 0;
         }
         p{
+            font-size: 22px;
             
             padding: 20px 0;
+        }
+        a{
+            // background-color: yellow;
+            font-size: 22px;
         }
     }
     .info-contact{

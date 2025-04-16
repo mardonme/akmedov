@@ -1,8 +1,9 @@
 import { useInfoContext } from "../../context/infoContext";
 import "./Footer.scss";
 import { RiInstagramFill, RiTelegramFill } from "react-icons/ri";
+
 const Footer = () => {
-  const {update, setUpdate} = useInfoContext()
+  const { update, setUpdate } = useInfoContext();
   return (
     <footer>
       <div className="footer__container">
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="footer-menu__wrap">
             <div className="footer-menu">
               <a href="/about" className="footer-menu__name">
-              О компании
+                О компании
               </a>
               <ul className="footer-menu__list">
                 <li className="footer-menu__item">Наша миссия</li>
@@ -60,6 +61,13 @@ const Footer = () => {
             </div>
           </section>
           <div className="footer-row">
+          <div className="footer-contact">
+              <h2 className="footer-contact__title">Контактная информация</h2>
+              <p><strong>Для потребителей:</strong> +998 99 055 82 83</p>
+              <p><strong>Для сотрудничества:</strong></p>
+              <p>Ташкент: +998 98 888 08 38</p>
+              <p>Регионы: +998 90 043 04 83</p>
+            </div>
             <div className="social">
               <strong className="social__name">Мы в социальных сетях:</strong>
               <ul className="social__list">
@@ -68,7 +76,7 @@ const Footer = () => {
                     className="social-link"
                     href="https://www.instagram.com/akhmedovuzbekistan"
                     target="_blank"
-                    rel="noopener nofollow"
+                    rel="noopener noreferrer"
                     aria-label="Наша страница в Instagram"
                   >
                     <RiInstagramFill />
@@ -79,7 +87,7 @@ const Footer = () => {
                     className="social-link"
                     href="https://www.t.me/Farengiz"
                     target="_blank"
-                    rel="noopener nofollow"
+                    rel="noopener noreferrer"
                     aria-label="Наша страница в Telegram"
                   >
                     <RiTelegramFill />

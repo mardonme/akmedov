@@ -1,25 +1,40 @@
 import React, { useState } from "react";
 import './Contact.scss'
+import axios from "axios";
 const Home = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
+  const [send, setSend] = useState('');
+  const [status, setStatus] = useState(''); // 'success', 'error', ''
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    // Add your API request logic here
-    alert("Form submitted successfully!");
+    const data = new FormData(e.target);
+
+    setSend('Отправка...');
+    try {
+      const res = await axios.post(
+        `https://olx-server-omega.vercel.app/api/message/submit`,
+        data
+      );
+      setSend('Отправлено 😊');
+      setStatus('success');
+      e.target.reset();
+
+      setTimeout(() => {
+        setSend('');
+        setStatus('');
+      }, 2000);
+    } catch (error) {
+      setSend('Операции не отправлены... 🤷‍♂️');
+      setStatus('error');
+
+      setTimeout(() => {
+        setSend('');
+        setStatus('');
+      }, 2000);
+    }
   };
+
   return (
     <div className="contact">
       <div className="container">
@@ -27,9 +42,9 @@ const Home = () => {
           <h2 data-aos="fade-right">Контакты</h2>
           <b>Адрес:</b>
           <p>OOO "SABE", г. Сырдарья, Сырдарьинская область, туманный центр Рахимов, улица Достлик, дом 20.</p>
-          <b>Телефон:</b>
-          <p>+99899 055 82 83</p>
-        </div>
+          {/* <b>Телефон:</b> */}
+          <a href="https://t.me/akhmedov_uzbekistan" target="_blank" rel="noopener noreferrer">Telegram канал</a>
+          </div>
       </div>
      <div className="contact-form-container">
       <div className="container">
@@ -42,8 +57,6 @@ const Home = () => {
             type="text"
             name="name"
             placeholder="Укажите имя"
-            value={formData.name}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group" data-aos="fade-up">
@@ -52,8 +65,6 @@ const Home = () => {
             type="tel"
             name="phone"
             placeholder="+998 90 999-99-99"
-            value={formData.phone}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group" data-aos="fade-up">
@@ -62,33 +73,36 @@ const Home = () => {
             type="email"
             name="email"
             placeholder="example@mail.com"
-            value={formData.email}
-            onChange={handleChange}
           />
         </div>
         <div className="form-group" data-aos="fade-up">
           <label>Тема сообщения</label>
           <input
             type="text"
-            name="subject"
+            name="context"
             placeholder="Укажите тему"
-            value={formData.subject}
-            onChange={handleChange}
           />
         </div>
         </div>
         <div className="form-groups" data-aos="fade-up">
           <label>Сообщение</label>
           <textarea
-            name="message"
+            name="content"
             placeholder="Ваше сообщение"
-            value={formData.message}
-            onChange={handleChange}
           />
         </div>
-        <button data-aos="zoom-in" type="submit" className="submit-button">
-          Отправить
-        </button>
+        <button
+                disabled={send}
+                    data-aos="zoom-in" type="submit" className="submit-button"
+                    style={{
+                      backgroundColor:
+                        status === "success" ? "green" : status === "error" ? "red" : "#f9532d",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    {send || 'Отправить'}
+                </button>
       </form>
       </div>
     </div>
