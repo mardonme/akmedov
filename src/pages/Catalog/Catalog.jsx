@@ -38,7 +38,7 @@ const Catalog = () => {
                 </Link>
                 <Link className="catalog-container__wrapper__box__row__item">
                   <img src="images/Kreasy3.png" alt="iceCream" />
-                  <p>Винолед Яблоко+Лимон</p>
+                  <p>Винтолед Яблоко+Лимон</p>
                 </Link>
               </div>
             </div>

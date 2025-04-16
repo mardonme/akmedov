@@ -1,11 +1,12 @@
 @font-face {
-  font-family: "Pribambas";
-  src:
-    local("Pribambas"),
-    url("../../../public/pribambas/Pribambas-Regular.eot") format("opentype") tech(color-COLRv1),
-    url("../../../public/pribambas/Pribambas-Regular.woff") format("opentype"),
-    url("trickster-outline.woff") format("woff");
+  font-family: 'Pribambas';
+  src: url('/pribambas/Pribambas-Regular.woff2') format('woff2'),
+       url('/pribambas/Pribambas-Regular.woff') format('woff'),
+       url('/pribambas/Pribambas-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 .catalog {
   .maxs{
     img{
@@ -74,7 +75,7 @@
             }
             p {
               text-align: center;
-              font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+              font-family: 'Pribambas', sans-serif;
               margin-top: 25px;
               // background-color: yellow;
               font-weight: 500;

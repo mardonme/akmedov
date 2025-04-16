@@ -81,22 +81,22 @@ const Home = () => {
       <div className="slider-container">
           <Slider {...settings}>
             <div className="slider-item">
-              <img src="../../../public/images/banner1.JPG" alt="" />{" "}
+              <img src="images/banner1.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="slider-item">
-              <img src="../../../public/images/banner2.JPG" alt="" />{" "}
+              <img src="images/banner2.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="slider-item">
-              <img src="../../../public/images/banner3.JPG" alt="" />{" "}
+              <img src="images/banner3.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="slider-item">
-              <img src="../../../public/images/banner4.JPG" alt="" />{" "}
+              <img src="images/banner4.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
@@ -107,7 +107,7 @@ const Home = () => {
             <Carousel.Item key={idx}>
               <div className="img-box" style={{ textAlign: "center" }}>
                 <img
-                  src="../../../public/images/banner1.JPG"
+                  src="images/banner1.JPG"
                   alt={`Slide ${idx + 1}`}
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
@@ -115,7 +115,7 @@ const Home = () => {
             </Carousel.Item>
           ))}
         </Carousel> */}
-        {/* <img src="../../../public/images/banner1.JPG" alt="" />{" "} */}
+        {/* <img src="images/banner1.JPG" alt="" />{" "} */}
         <div className="container first-container">
           <div className="first-container__left" data-aos="fade-right">
             <h1>Мороженое с семейной историей</h1>
@@ -146,7 +146,7 @@ const Home = () => {
           </div>
           <div className="second-container__right" data-aos="fade-up">
             <h3>
-              Компания «Ахмедов» радует жителей Узбекистана качественным
+              Компания «Akhmedov» радует жителей Узбекистана качественным
               мороженым и глазированными сырками с 2002 года. Тщательно
               отобранное качественное сырье и эксклюзивный ассортимент для
               истинных гурманов.
