@@ -28,14 +28,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .slider-item{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
+  .sliders-item{
     display: flex;
     align-items: center;
     justify-content: center;
+    img{
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
   }
 }
 

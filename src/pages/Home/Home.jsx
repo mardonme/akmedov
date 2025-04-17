@@ -81,22 +81,22 @@ const Home = () => {
       <section className="first">
         <div className="slider-container">
           <Slider {...settings}>
-            <div className="slider-item">
+            <div className="sliders-item">
               <img src="images/banner1.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
-            <div className="slider-item">
+            <div className="sliders-item">
               <img src="images/banner2.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
-            <div className="slider-item">
+            <div className="sliders-item">
               <img src="images/banner3.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
-            <div className="slider-item">
+            <div className="sliders-item">
               <img src="images/banner4.JPG" alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
