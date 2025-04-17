@@ -2,7 +2,7 @@
   position: relative;
   .modallink {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: 50px;
     height: 100px;
     width: 200px;
@@ -29,11 +29,10 @@
   }
   
   .slider-item{
-    // background-image: url(/public/images/banner1.JPG);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 95vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,9 +284,6 @@
 
 @media (max-width: 740px) {
   .slider-container{
-    .slider-item{
-
-    }
     img{
       width: 100vw;
       height: 90vh;

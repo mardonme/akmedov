@@ -22,7 +22,7 @@ const Catalog = () => {
               className="catalog-container__wrapper__box maxs"
             >
               <h2 className="catalog-container__wrapper__box__subtitle">
-                Крези Макс
+              Kreasy Max
               </h2>
               <div
                 data-aos="fade-up"
