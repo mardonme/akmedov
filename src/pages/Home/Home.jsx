@@ -82,22 +82,22 @@ const Home = () => {
         <div className="slider-container">
           <Slider {...settings}>
             <div className="sliders-item">
-              <img src="images/banner1.JPG" alt="" />{" "}
+              <img src={window.innerWidth <= 500 ? "images/mobile1.JPG" : "images/banner1.JPG"} alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="sliders-item">
-              <img src="images/banner2.JPG" alt="" />{" "}
+              <img src={window.innerWidth <= 500 ? "images/mobile2.JPG" : "images/banner2.JPG"} alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="sliders-item">
-              <img src="images/banner3.JPG" alt="" />{" "}
+              <img src={window.innerWidth <= 500 ? "images/mobile3.JPG" : "images/banner3.JPG"} alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
             <div className="sliders-item">
-              <img src="images/banner4.JPG" alt="" />{" "}
+              <img src={window.innerWidth <= 500 ? "images/mobile4.JPG" : "images/banner4.JPG"} alt="" />{" "}
               {/* <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum distinctio ipsa debitis similique possimus fuga voluptates necessitatibus veniam, consectetur incidunt!</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quaerat!</p> */}
             </div>
