@@ -22,21 +22,21 @@ function App() {
         <Loader click={setOpen} />
       ) : (
         <div className="body-container">
-          {/* <Header /> */}
+          <Header />
           <main>
             <Routes>
-              {/* <Route path="/" index element={<Home />} />
+              <Route path="/" index element={<Home />} />
               <Route path="/made" index element={<Made />} />
               <Route path="/history" index element={<History />} />
               <Route path="/buy" index element={<WhereToBuy />} />
               <Route path="/about" index element={<About />} />
               <Route path="/catalog" index element={<Catalog />} />
               <Route path="/contact" index element={<Contact />} />
-              <Route path="*" index element={<Navigate to="/" replace />} /> */}
-              <Route path="*" index element={<NotFound />} />
+              <Route path="*" index element={<Navigate to="/" replace />} />
+              {/* <Route path="*" index element={<NotFound />} /> */}
             </Routes>
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       )}
     </>
