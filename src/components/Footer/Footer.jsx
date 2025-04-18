@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="footer-row">
           <div className="footer-contact">
               <h2 className="footer-contact__title">Контактная информация</h2>
-              <p><strong>Для потребителей:</strong> +998 99 055 82 83</p>
+              <p><strong>Для потребителей:</strong>+998990558283</p>
               <p><strong>Для сотрудничества:</strong></p>
               <p>Ташкент: +998 98 888 08 38</p>
               <p>Регионы: +998 90 043 04 83</p>

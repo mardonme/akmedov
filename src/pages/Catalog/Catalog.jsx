@@ -12,7 +12,13 @@ const Catalog = () => {
               href="/images/ahmedov_katalog.pdf"
               download="ahmedov_katalog.pdf"
             >
-              Загрузка каталога <i className="bx bx-down-arrow-alt"></i>
+              Каталог Мороженого <i className="bx bx-down-arrow-alt"></i>
+            </a>
+            <a
+              href="/images/sirokprice.pdf"
+              download="sirokprice.pdf"
+            >
+              Каталог Сырков <i className="bx bx-down-arrow-alt"></i>
             </a>
           </h1>
           <div data-aos="fade-up" className="catalog-container__wrapper">
