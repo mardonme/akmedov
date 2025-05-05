@@ -123,7 +123,7 @@ const Footer = () => {
           
           <div className="contact-group">
             <p className="contact-label">Для потребителей:</p>
-            <a href="tel:+998990558283" className="contact-number">+998 99 055-82-83</a>
+            <a href="tel:+998990558283" className="contact-number">+998 98 888-08-38</a>
           </div>
           
           <p className="contact-label">Для сотрудничества:</p>
