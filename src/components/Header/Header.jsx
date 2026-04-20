@@ -1,57 +1,92 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import "./Header.scss";
 import { useInfoContext } from "../../context/infoContext";
+import { contactInfo } from "../../constants/contacts";
+import "./Header.scss";
+
+const primaryNav = [
+  { to: "/about", label: "О компании" },
+  { to: "/made", label: "Отдел производства" },
+  { to: "/catalog", label: "Продукция" },
+  { to: "/contact", label: "Контакты" },
+  { to: "/buy", label: "Где купить?" },
+];
+
+const mobileNav = [
+  { to: "/about", label: "О компании" },
+  { to: "/catalog", label: "Продукция" },
+  { to: "/contact", label: "Контакты" },
+];
+
+const bottomNav = [
+  { to: "/", label: "Домой", icon: "bx-home-smile" },
+  { to: "/about", label: "О компании", icon: "bx-package" },
+  { to: "/catalog", label: "Продукция", icon: "bx-basket" },
+  { to: "/contact", label: "Контакты", icon: "bx-universal-access" },
+];
 
 const Header = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const {scroll} = useInfoContext()
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { scroll } = useInfoContext();
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
-    return (
-        <header className="header" ref={scroll}>
-            <div className="container">
-                <Link to='/' className="logo">
-                    <img src="/images/logo.png" alt="logo" />
-                </Link>
+  const headerPhone = contactInfo.phones.header;
 
-                <nav className={`nav-links ${menuOpen ? "hidden" : ""}`}>
-                    <NavLink to='/about'>О компании</NavLink>
-                    <NavLink to='/made'>Отдел производства</NavLink>
-                    <NavLink to='/catalog'>Продукция</NavLink>
-                    <NavLink to='/contact'>Контакты</NavLink>
-                    <NavLink to='/buy'>Где купить?</NavLink>
-                </nav>
+  return (
+    <header className="header" ref={scroll}>
+      <div className="container">
+        <Link to="/" className="logo">
+          <img src="/images/logo.png" alt="logo" />
+        </Link>
 
-                <div className={`contact ${menuOpen ? "hidden" : ""}`}>
-                    <Link to='tel:501117733' className="phone">50 111 77 33</Link>
-                </div>
+        <nav className={`nav-links ${menuOpen ? "hidden" : ""}`}>
+          {primaryNav.map((item) => (
+            <NavLink key={item.to} to={item.to}>
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
 
-                <button className={`menu-btn ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </button>
-            </div>
+        <div className={`contact ${menuOpen ? "hidden" : ""}`}>
+          <Link to={headerPhone.href} className="phone">
+            {headerPhone.label}
+          </Link>
+        </div>
 
-            <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-                <NavLink to='/about' onClick={toggleMenu}>О компании</NavLink>
-                <NavLink to='/catalog' onClick={toggleMenu}>Продукция</NavLink>
-                <NavLink to='/contact' onClick={toggleMenu}>Контакты</NavLink>
-                <Link to='tel:501117733' className="phone">50 111 77 33</Link>
-            </div>
+        <button
+          className={`menu-btn ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+        >
+          <div className="bar" />
+          <div className="bar" />
+          <div className="bar" />
+        </button>
+      </div>
 
-            <div className="media-mobile">
-                <NavLink to='/'><i className='bx bx-home-smile' ></i> Домой</NavLink>
-                <NavLink to='/about'><i className='bx bx-package' ></i> О компании</NavLink>
-                <NavLink to='/catalog'><i className='bx bx-basket'></i> Продукция</NavLink>
-                <NavLink to='/contact'><i className='bx bx-universal-access' ></i> Контакты</NavLink>
-            </div>
-        </header>
-    );
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        {mobileNav.map((item) => (
+          <NavLink key={item.to} to={item.to} onClick={closeMenu}>
+            {item.label}
+          </NavLink>
+        ))}
+        <Link to={headerPhone.href} className="phone">
+          {headerPhone.label}
+        </Link>
+      </div>
+
+      <div className="media-mobile">
+        {bottomNav.map((item) => (
+          <NavLink key={item.to} to={item.to}>
+            <i className={`bx ${item.icon}`} /> {item.label}
+          </NavLink>
+        ))}
+      </div>
+    </header>
+  );
 };
 
 export default Header;

@@ -1,14 +1,20 @@
-import React from 'react'
-import './Loader.scss'
+import "./Loader.scss";
 
-const Loader = ({click}) => {
-  return (
-    <div className='loader' onClick={() => click(true)}>
-      <div className="content">
-        <img src="images/logo.png" alt="logo" />
-      </div>
+const Loader = ({ onDismiss }) => (
+  <div
+    className="loader"
+    onClick={onDismiss}
+    role="button"
+    tabIndex={0}
+    onKeyDown={(event) => {
+      if (event.key === "Enter" || event.key === " ") onDismiss();
+    }}
+    aria-label="Войти на сайт"
+  >
+    <div className="content">
+      <img src="/images/logo.png" alt="Akhmedov" />
     </div>
-  )
-}
+  </div>
+);
 
-export default Loader
+export default Loader;

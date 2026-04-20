@@ -1,4 +1,3 @@
-import React from "react";
 import "./Made.scss";
 
 const Production = () => {
