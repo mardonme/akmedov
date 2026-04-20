@@ -20,7 +20,7 @@ const WhereToBuy = () => {
               <a href="https://korzinka.uz/" target="_blank" rel="noopener noreferrer">Korzinka.uz</a> 
             </li>
             <li>
-              <a href="https://t.me/akhmedov_uzbekistan" target="_blank" rel="noopener noreferrer">Телеграм канал</a>
+              <a href="https://t.me/akhmedov_uzbekistan" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
             </li>
           </ul>
           <p className="order-number">Номер для заказа: +998900514841</p>
@@ -53,7 +53,7 @@ const WhereToBuy = () => {
               <a href="https://www.instagram.com/akhmedovuzbekistan" target="_blank" rel="noopener noreferrer">Instagram</a>
             </li>
             <li>
-              <a href="https://t.me/akhmedov_uzbekistan" target="_blank" rel="noopener noreferrer">Telegram канал</a>
+              <a href="https://t.me/akhmedov_uzbekistan" target="_blank" rel="noopener noreferrer">Telegram-канал</a>
             </li>
             <li>
               <a href="mailto:your-email@example.com" target="_blank" rel="noopener noreferrer">Gmail</a>
