@@ -4,11 +4,13 @@ export const heroSliderSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  speed: 500,
-  autoplaySpeed: 2500,
-  cssEase: "linear",
+  speed: 1200,
+  autoplaySpeed: 5000,
+  cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+  fade: true,
   arrows: false,
   pauseOnHover: false,
+  swipe: true,
 };
 
 export const logoCarouselSettings = {

@@ -5,45 +5,39 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 - `npm run dev` — start Vite dev server with HMR
-- `npm run build` — produce a production build in `dist/`
-- `npm run preview` — serve the built `dist/` locally
-- `npm run lint` — run ESLint over the repo
+- `npm run build` — production build to `dist/`
+- `npm run preview` — preview the production build
+- `npm run lint` — run ESLint over the repo (flat config in `eslint.config.js`)
 
-There is no test suite configured in `package.json`.
+There is no test runner configured.
 
 ## Architecture
 
-This is a Vite + React 18 single-page marketing site (Russian UI) for an ice cream / dairy brand. The `package.json` name is `katta-mehnat`, but the user-facing site is "Madaniy Hayot".
+Single-page React 18 + Vite app for an ice cream brand marketing site (deployed to Vercel — see `vercel.json` for SPA rewrites). Internal package name in `package.json` is `katta-mehnat`; the working directory is `ice_cream_beta`.
 
 ### Entry and routing
 
-- [src/main.jsx](src/main.jsx) wraps the app in `BrowserRouter` → `InfoProvider`, initializes AOS (1500 ms) globally, and imports slick-carousel and boxicons CSS once at the top level. Page components rely on these side-effect imports being in place.
-- [src/App.jsx](src/App.jsx) gates the whole app behind a `Loader` splash — until `open` flips to true via `Loader`'s `click` prop, the router tree is not rendered. After that it renders `Header` + `<Routes>` + `Footer`.
-- Routes live directly in `App.jsx`: `/`, `/made`, `/history`, `/buy`, `/about`, `/catalog`, `/contact`. The catch-all currently redirects to `/` (the `NotFound` component is imported but its route is commented out).
-- Client-side routing requires SPA fallback in hosting. Both [vercel.json](vercel.json) (Vercel rewrite) and [public/_redirects](public/_redirects) (Netlify) are present — keep them in sync when adding routes.
+- `src/main.jsx` mounts the app inside `BrowserRouter` and `InfoProvider`, and globally initializes AOS (scroll animations, 1500ms) plus Slick and Boxicons CSS.
+- `src/App.jsx` defines the route table. **All page components are lazy-loaded** via `React.lazy` + `Suspense` (fallback: `PageFallback`). Unknown routes redirect to `/`.
+- App is gated by a `Loader` splash on first mount — `<Loader onDismiss>` must fire before `Header`/`<Routes>`/`Footer` render. Don't bypass this without intent; it's the intro experience.
 
-### Global state
+### State
 
-[src/context/infoContext.jsx](src/context/infoContext.jsx) exposes `useInfoContext()` and an `InfoProvider` that holds:
+- One global context: [src/context/infoContext.jsx](src/context/infoContext.jsx). Exposes `currentUser` (rehydrated from `localStorage.profile`), `setCurrentUser`, `update`/`setUpdate`, and a shared `scroll` ref that auto-scrolls into view whenever `update` toggles. There is no Redux/Zustand.
+- Page-level state lives inside each page component under `src/pages/<Name>/`.
 
-- `currentUser` / `setCurrentUser` — hydrated from `localStorage.profile` on mount.
-- `update` / `setUpdate` — toggling this triggers a `scrollIntoView` on `scroll.current`.
-- `scroll` — a ref attached to `<header>` in [src/components/Header/Header.jsx](src/components/Header/Header.jsx); flipping `update` scrolls the page back to the header. This is the canonical way to "scroll to top" in this app — do not add separate `window.scrollTo` calls.
+### Data and constants
 
-### Styling
+- Static site content (banners, brands, contacts, history, mission, partners, products, sliders) lives in `src/constants/*.js` and is imported directly by pages/components. **When content needs to change, edit these files** rather than introducing a CMS.
+- API calls go through [src/api/client.js](src/api/client.js): an axios instance with `baseURL = import.meta.env.VITE_API_URL || "https://olx-server-omega.vercel.app/api"` and 15s timeout. Currently the only endpoint is `submitContactForm` → `POST /message/submit` ([src/api/contact.js](src/api/contact.js)).
 
-Each page and component is colocated with its own SCSS file (e.g. [src/pages/Home/Home.scss](src/pages/Home/Home.scss), [src/components/Header/Header.scss](src/components/Header/Header.scss)) and imported directly from the JSX file. Global styles live in [src/App.css](src/App.css). Bootstrap, react-bootstrap, boxicons, AOS, and slick-carousel are all available — prefer those over adding new UI libraries.
+### UI conventions
 
-### External integrations
+- Components follow a one-folder-per-component pattern under `src/components/<Name>/` (typically `<Name>.jsx` + `<Name>.scss`). Pages mirror this under `src/pages/<Name>/`.
+- Styling is **Sass (`.scss`)** colocated with each component/page, plus Bootstrap 5 + react-bootstrap utility classes. Global resets/variables live in `src/App.css`.
+- Icon libraries in active use: `boxicons` (web component + CSS), `react-icons`. Carousels use `react-slick` (CSS imported globally in `main.jsx`).
+- Animations use AOS data attributes — initialized once globally, so just add `data-aos="..."` in JSX.
 
-The only backend call is in [src/pages/Contact/Contact.jsx](src/pages/Contact/Contact.jsx), which POSTs form submissions to `https://olx-server-omega.vercel.app/api/message/submit` via axios. There is no API layer or `.env` — the URL is hard-coded.
+### Routing map
 
-### Static assets
-
-Images and extras are served from [public/images/](public/images/) and [public/pribambas/](public/pribambas/) and referenced by absolute paths (e.g. `/images/logo.png`). Do not import them through the module graph.
-
-## Conventions
-
-- JSX-only codebase (`.jsx`); no TypeScript.
-- Page folders use `PascalCase/PascalCase.jsx` + `PascalCase.scss`. Match this layout when adding new pages, and register the route in `App.jsx`.
-- UI copy is Russian. Preserve existing Cyrillic strings when refactoring.
+`/` Home · `/made` Made · `/history` History · `/buy` WhereToBuy · `/about` About · `/catalog` Catalog · `/contact` Contact. Add new routes in the `routes` array in [src/App.jsx](src/App.jsx) and a matching lazy import.

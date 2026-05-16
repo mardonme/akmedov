@@ -67,5 +67,5 @@ export const catalogSections = [
 
 export const catalogDownloads = [
   { href: "/images/ahmedov_katalog.pdf", file: "ahmedov_katalog.pdf", label: "Каталог Мороженого" },
-  { href: "/images/sirokprice.pdf", file: "sirokprice.pdf", label: "Каталог Сырков" },
+  { href: "/images/newcatalog.pdf", file: "newcatalog.pdf", label: "Новый каталог" },
 ];

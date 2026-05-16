@@ -1,9 +1,21 @@
-.slider-container{
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.15) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+.slider-container {
   position: relative;
+  overflow: hidden;
+
   .modallink {
     position: absolute;
     bottom: 100px;
     left: 50px;
+    z-index: 3;
     height: 100px;
     width: 200px;
     border-radius: 20px;
@@ -14,12 +26,12 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .modallink:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
-  
+
   .modallink p {
     color: white;
     font-size: 18px;
@@ -27,15 +39,84 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
-  .sliders-item{
+
+  // react-slick fade leaves both slides stacked; this keeps the
+  // crossfade clean and lets the active slide own pointer events.
+  .slick-slide {
+    pointer-events: none;
+    > div {
+      line-height: 0;
+    }
+  }
+  .slick-slide.slick-active {
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+  .sliders-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    img{
-        height: 100vh;
-        width: 100%;
-        object-fit: cover;
+    overflow: hidden;
+
+    // subtle vignette for legibility over any banner
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0) 35%,
+        rgba(0, 0, 0, 0) 65%,
+        rgba(0, 0, 0, 0.25) 100%
+      );
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    img {
+      height: 100vh;
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.04);
+      transition: transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+      will-change: transform;
+    }
+  }
+
+  // slow Ken Burns drift only on the active slide
+  .slick-active .sliders-item img {
+    animation: heroKenBurns 7s ease-out forwards;
+  }
+
+  // refined pagination dots
+  .slick-dots {
+    bottom: 28px;
+    z-index: 3;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    li {
+      width: auto;
+      height: auto;
+      margin: 0;
+      button {
+        width: 28px;
+        height: 4px;
+        padding: 0;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.45);
+        transition: background 0.35s ease, width 0.35s ease;
+        &::before {
+          content: none;
+        }
+      }
+      &.slick-active button {
+        width: 44px;
+        background: #ffffff;
+      }
     }
   }
 }
@@ -133,78 +214,6 @@
         margin-bottom: 20px;
       }
     }
-    &__down {
-      width: 100%;
-      .slick-slider {
-        margin-bottom: 50px;
-        display: flex;
-        width: 100%;
-        .img-box {
-          width: 160px;
-          padding: 20px;
-          img {
-            transform: scale(0.9);
-            width: 100%;
-            object-fit: contain;
-            transition: all ease 0.5s;
-            &:hover {
-              transform: scale(1);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-.fourth {
-  margin: 200px 0;
-  &-container {
-    &__title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 50px;
-      h1 {
-        font-size: clamp(16px, 3vw, 40px);
-        font-weight: 700;
-        color: var(--main-color);
-        margin-bottom: 20px;
-      }
-      a {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-weight: 700;
-        font-size: 24px;
-        color: purple;
-        margin-bottom: 20px;
-      }
-    }
-    &__wrapper {
-      width: 100%;
-      height: 160px;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      display: flex;
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 30px;
-        width: 200px;
-        img {
-          // transition: filter .2s ease;
-          filter: grayscale(100%);
-          width: 100%;
-          height: 100px;
-          object-fit: contain;
-          
-            filter: grayscale(0);
-
-        }
-      }
-    }
   }
 }
 
@@ -255,28 +264,6 @@
           font-weight: 700;
           color: #6e6e6e;
           margin-bottom: 20px;
-        }
-      }
-    }
-  }
-  .fourth {
-    margin: 180px 0;
-    &-container {
-      &__title {
-        gap: 40px;
-        margin-bottom: 40px;
-        h1 {
-          font-size: 2.7rem;
-        }
-        a {
-          font-size: 22px;
-        }
-      }
-      &__wrapper {
-        a {
-          p {
-            font-size: 1.2rem;
-          }
         }
       }
     }
@@ -345,28 +332,6 @@
       }
     }
   }
-  .fourth {
-    margin: 120px 0 0 0;
-    &-container {
-      &__title {
-        gap: 40px;
-        margin-bottom: 40px;
-        h1 {
-          font-size: 2rem;
-        }
-        a {
-          font-size: 20px;
-        }
-      }
-      &__wrapper {
-        a {
-          p {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
-  }
 }
 @media (max-width: 530px) {
   .first {
@@ -409,28 +374,6 @@
         h3 {
           width: 100%;
           font-size: 1.5rem;
-        }
-      }
-    }
-  }
-  .fourth {
-    margin: 100px 0 0 0;
-    &-container {
-      &__title {
-        gap: 40px;
-        margin-bottom: 40px;
-        h1 {
-          font-size: 1.5rem;
-        }
-        a {
-          font-size: 14px;
-        }
-      }
-      &__wrapper {
-        a {
-          p {
-            font-size: 1.2rem;
-          }
         }
       }
     }

@@ -3,6 +3,7 @@ import {
   logoCarouselSettings,
   logoCarouselSettingsRtl,
 } from "../../constants/sliders";
+import "./LogoCarousel.scss";
 
 const LOGO_COUNT = 16;
 const logos = Array.from({ length: LOGO_COUNT });

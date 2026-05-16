@@ -1,35 +1,47 @@
+$brand: #393582;
+$brand-dark: #393582;
+$muted: #6e6e6e;
+
+.about-page {
+  &__title {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    margin: 20px 0 40px;
+  }
+}
+
 .second {
   margin-bottom: 120px;
+
   &-box {
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap: 20px;
+
     &__left {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 20px;
       width: 50%;
-      // align-items: center;
-      h1 {
-        font-size: clamp(25px, 4vw, 50px);
-        font-weight: 700;
-        color: black;
-        margin-bottom: 40px;
-        text-align: center;
-      }
-      h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #6e6e6e;
-        margin-bottom: 20px;
-      }
     }
+
+    &__paragraph {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: $muted;
+      line-height: 1.6;
+      margin: 0;
+    }
+
     &__right {
       display: flex;
       width: 50%;
       justify-content: center;
       align-items: center;
+
       img {
         width: 85%;
         height: auto;
@@ -39,615 +51,409 @@
   }
 }
 
-.faq-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.faq-title {
-  color: #4E428E;
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 24px;
-}
-
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 16px 0;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  color: #4E428E;
-  font-size: 24px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-icon {
-  font-size: 24px;
-}
-
-.faq-answer {
-  overflow: hidden;
-  width: 100%;
-  text-wrap: wrap;
-  text-align: start;
-  transition: height 0.3s ease;
-}
-
-.faq-answer-inner {
-  padding-top: 10px;
-  // color: #555;
-  color: #4d428eb7;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-
 .holding {
   margin-bottom: 120px;
-  .abouth1 {
-    font-size: 3rem;
+
+  &__title {
+    font-size: clamp(28px, 3.5vw, 48px);
     font-weight: 700;
     color: black;
     margin-bottom: 30px;
-    display: none;
+    text-align: center;
   }
-    &-box {
-      display: flex;
-      justify-content: space-between;
-      &__wrapper {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px; /* Kubiklar orasidagi bo'shliq */
-        &__item {
-          display: flex;
-          align-items: center;
-          padding: 50px;
-          background: linear-gradient(135deg, #393582, #393582); /* Nozik gradient */
-          border-radius: 30px; /* Yumshoqroq burchaklar */
-          color: white;
-          transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effekti uchun */
-          &:hover {
-            transform: translateY(-10px); /* Hoverda yuqoriga siljish */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soye qo'shish */
-          }
-          img{
-            width: 100%;
-          }
-        }
-      }
-      &__description {
+
+  &-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    &__wrapper {
+      width: 50%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+
+      &__item {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        gap: 30px;
-        width: 50%;
-        padding-left: 80px;
-        h1 {
-          font-size: 3rem;
-          font-weight: 700;
-          color: black;
-          margin-bottom: 20px;
+        padding: 30px;
+        background: linear-gradient(135deg, $brand-dark, $brand);
+        border-radius: 30px;
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-        p {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: #6e6e6e;
-        }
-        a {
-          display: flex;
+
+        img {
           width: 100%;
-          font-weight: 600;
-          color: #4E428E; /* Havola rangi */
-          font-size: 1.5rem;
-          gap: 20px;
-          align-items: center;
-          text-decoration: none; /* Havola tagidagi chiziqni olib tashlash */
-          &:hover {
-            color: darken(#4E428E, 10%); /* Hoverda rangni to'qroq qilish */
-          }
+          height: auto;
+          object-fit: contain;
         }
       }
     }
-  }
 
-// strategiya
-.st {
-    margin-bottom: 120px;
-    &-box {
+    &__description {
       display: flex;
-      justify-content: space-between;
-      &__wrapper {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px; /* Kubiklar orasidagi bo'shliq */
-        &__item {
-          padding: 50px;
-          background: linear-gradient(135deg, #4E428E, #4E428E); /* Nozik gradient */
-          border-radius: 30px; /* Yumshoqroq burchaklar */
-          color: white;
-          transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effekti uchun */
-          &:hover {
-            transform: translateY(-10px); /* Hoverda yuqoriga siljish */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soye qo'shish */
-          }
-          h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            font-family: 'Arial', sans-serif;
-            color: #ffcc00; /* Sarlavha rangi */
-          }
-          p {
-            font-size: 1.2rem;
-            // font-family: 'Georgia', serif;
-            color: #ffffff; /* Matn rangi */
-          }
-        }
-      }
-      &__description {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 30px;
-        width: 50%;
-        padding-left: 80px;
-        h1 {
-          font-size: 3rem;
-          font-weight: 700;
-          color: black;
-          margin-bottom: 20px;
-        }
-        p {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: #6e6e6e;
-        }
-        a {
-          display: flex;
-          width: 100%;
-          font-weight: 600;
-          color: #4E428E; /* Havola rangi */
-          font-size: 1.5rem;
-          gap: 20px;
-          align-items: center;
-          text-decoration: none; /* Havola tagidagi chiziqni olib tashlash */
-          &:hover {
-            color: darken(#4E428E, 10%); /* Hoverda rangni to'qroq qilish */
-          }
-        }
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      width: 50%;
+      padding-left: 40px;
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: $muted;
+        line-height: 1.6;
+        margin: 0;
       }
     }
   }
+}
 
+.third {
+  margin-bottom: 120px;
+}
 
-// Asosiy stilizatsiyalar
 .section {
-    padding: 2rem 0;
-    position: relative;
-    overflow: hidden;
-  .lazyload{
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+
+  .lazyload {
     width: 100%;
   }
-    .section-top {
-      text-align: center;
-      margin-bottom: 2rem;
-  
-      .title {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #333;
-  
-        &--size_s {
-          font-size: 1.5rem;
+
+  .section-top {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 700;
+      color: #333;
+    }
+  }
+}
+
+.mission {
+  margin-bottom: 120px;
+}
+
+.mission-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+
+  .mission-image {
+    flex: 1 1 40%;
+    max-width: 40%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .mission-content {
+    flex: 1 1 50%;
+    max-width: 55%;
+  }
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__count {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $brand;
+    margin-right: 1rem;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  &__content {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+}
+
+.anim {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &--image {
+    transform: translateX(-20px);
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+}
+
+.anim-parent--right {
+  .mission-list__item {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.history {
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 60px;
+
+  .history-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+
+    h2 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 600;
+      color: #333;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+      color: $brand;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: darken($brand, 10%);
+      }
+
+      i {
+        font-size: 1.4rem;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba($brand, 0.2);
+      z-index: 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      padding: 10px 20px;
+      flex-shrink: 0;
+
+      .circle {
+        font-size: clamp(2rem, 3vw, 3.5rem);
+        font-weight: 700;
+        color: var(--pre-color);
+        background: #fff;
+        padding: 0 12px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .content {
+        margin-top: 40px;
+        background: #fff;
+        padding: 24px;
+        width: 320px;
+        max-width: 320px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        word-wrap: break-word;
+        white-space: normal;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .second {
+    &-box {
+      flex-direction: column-reverse;
+
+      &__left {
+        width: 100%;
+        text-align: center;
+      }
+
+      &__paragraph {
+        font-size: clamp(14px, 2vw, 18px);
+      }
+
+      &__right {
+        width: 100%;
+
+        img {
+          width: 80%;
+          margin: 0 auto;
         }
       }
     }
   }
-  
-  .mission-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    gap: 2rem;
-  
-    .mission-image {
-      flex: 1 1 45%;
-      max-width: 22%;
-      position: relative;
-  
-      img {
+
+  .holding {
+    &-box {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 40px;
+
+      &__wrapper {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &__description {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
       }
     }
-  
+  }
+}
+
+@media (max-width: 768px) {
+  .second,
+  .holding,
+  .third,
+  .mission {
+    margin-bottom: 80px;
+  }
+
+  .mission-inner {
+    flex-direction: column;
+    align-items: stretch;
+
+    .mission-image {
+      max-width: 100%;
+      flex: 1 1 100%;
+      padding: 0 20px;
+    }
+
     .mission-content {
-      flex: 1 1 50%;
-      max-width: 50%;
-    }
-  }
-  
-  .mission-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  
-    &__item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-  
-      &.active {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  
-    &__count {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #007bff;
-      margin-right: 1rem;
-      min-width: 40px;
-      text-align: center;
-    }
-  
-    &__content {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.5;
-    }
-  }
-  
-  // Animatsiyalar
-  .anim {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  
-    &.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    &--image {
-      transform: translateX(-20px);
-  
-      &.active {
-        transform: translateX(0);
+      max-width: 100%;
+      flex: 1 1 100%;
+
+      .mission-list__content {
+        font-size: clamp(14px, 4vw, 18px);
       }
     }
   }
-  
-  .anim-parent {
-    &--right {
-      .mission-list__item {
-        opacity: 0;
-        transform: translateX(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-  
-        &.active {
-          opacity: 1;
-          transform: translateX(0);
+
+  .holding {
+    &-box {
+      &__wrapper {
+        &__item {
+          padding: 20px;
         }
       }
     }
   }
 
   .history {
-    text-align: center;
-    padding: 50px 20px;
-    width: 100%;
-    height: auto;
-    // background: #f9f9f9;
-  
     .history-title {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #333;
-      padding: 0 10px;
+      justify-content: space-between;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1rem;
+      }
     }
-    
-    .history-title h2 {
-      margin: 0;
-      font-weight: 600;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    .history-title a {
-      font-size: 1.2rem;
-      // color: #6C9C6C;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      transition: color 0.3s ease;
-    }
-    
-    .history-title i {
-      font-size: 1.4rem;
-      margin-left: 5px;
-    }
-    
-  
+
     .timeline {
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      padding: 20px;
-      overflow-x: auto;
-      white-space: nowrap;
-  
       &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        transform: translateY(-50%);
+        top: 60px;
       }
-  
+
       .timeline-item {
-        position: relative;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: left;
         padding: 10px;
-  
-        .circle {
-          font-size: 3.5rem;
-          font-weight: bold;
-          color: var(--pre-color);
-          display: block;
-          z-index: 2;
-        }
-  
+
         .content {
-          margin-top: 85px;
-          background: #fff;
-          padding: 45px;
-          width: 400px; /* yoki max-width: 400px; */
-          border-radius: 10px;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          box-sizing: border-box; /* padding va border kenglikka kiritiladi */
-          word-wrap: break-word; /* uzun so'zlarni qatorlarga bo'lish */
-          white-space: normal; /* matnni avtomatik qatorlarga bo'lish */
-        }
-  
-        p {
-          font-size: 1rem;
-          color: #555;
+          width: 240px;
+          max-width: 240px;
+          padding: 16px;
         }
       }
     }
   }
-  
-  
-
-  @media (max-width: 1024px){
-    .second{
-      &-box{
-        flex-direction: column-reverse;
-        &__left{
-          width: 100%;
-          margin:  0 auto;
-          text-align: center;
-          h2{
-            font-size: clamp(12px, 4vw, 20px);
-          }
-        }
-        &__right{
-          width: 100%;
-          height: 20%;
-          img{
-            margin-top: -200px;
-            width: 100%;
-            object-fit: contain;
-          }
-        }
-      }
-    }
-    .holding{
-      &-box{
-        flex-direction: column;
-        align-items: center;
-        gap: 100px;
-        &__wrapper{
-          width: 100%;
-          margin:  0 auto;
-          text-align: center;
-          h2{
-            font-size: clamp(12px, 4vw, 20px);
-          }
-          p{
-            font-size: clamp(6px, 2vw, 16px);
-            padding: 20px;
-          }
-        }
-        &__description{
-          width: 100%;
-          height: 20%;
-        }
-      }
-
-    }
-  
-    .st{
-      &-box{
-        flex-direction: column;
-        align-items: center;
-        gap: 100px;
-        &__description{
-          flex-direction: column;
-          width: 100%;
-          text-align: center;
-          padding: 0;
-          h1{
-            font-size: clamp(30px, 4vw, 30px);
-          }
-          p{
-            font-size: clamp(6px, 2vw, 16px);
-            padding: 20px;
-          }
-          h3{
-            font-size: clamp(12px, 4vw, 50px);
-          }
-        }
-        &__wrapper{
-          width: 100%;
-          height: 20%;
-            h2{
-              font-size: clamp(12px, 4vw, 20px);
-            }
-            &__item{
-              padding: 20px 10px;
-              p{
-                font-size: clamp(6px, 2vw, 16px);
-              }
-              h2{
-                margin: 0;
-              }
-            }
-        }
-      }
-
-    }
-    .fourth{
-      h1{
-        font-size: clamp(25px, 3vw, 60px);
-      }
-      a{
-        font-size: clamp(12px, 3vw, 40px);
-      }
-      &__container{
-        &__wrapper{
-          a{
-            width: 100%;
-            p{
-              height: 50px;
-              overflow: hidden;
-              margin: 0 !important;
-            }
-          }
-        }
-      }
-      img{
-        width: 100% !important;
-        padding: 20px;
-        min-width: 200px;
-        // display: none;
-      }
-    }
-  }
-  
-  @media (max-width: 768px){
-    .faq-title{
-      font-size: 26px;
-    }
-    .section{
-      .mission-inner{
-        display: flex;
-        flex-direction: column;
-        .mission-image{
-          max-width: 100%;
-          padding: 0 40px;
-          img{
-            width: 100% !important;
-            height: auto !important;
-          }
-        }
-        .mission-content{
-          max-width: 100%;
-          .mission-list__content{
-            font-size: clamp(12px, 4vw, 20px);
-          }
-        }
-      }
-    }
-    .st{
-      &-box{
-        gap: 50px;
-        &__description{
-          gap: 5px;
-        }
-      }
-    }
-    .holding{
-      .abouth1{
-        display: block;
-        font-size: 2rem;
-      }
-      &-box{
-        gap: 50px;
-        &__wrapper{
-          h2{
-            font-size: clamp(12px, 4vw, 20px);
-          }
-          &__item{
-            padding: 20px 10px;
-            p{
-              font-size: clamp(6px, 2vw, 16px);
-            }
-            h2{
-              margin: 0;
-            }
-          }
-        }
-        &__description{
-          padding: 0 !important;
-          h1{
-            display: none;
-            font-size: 30px;
-            
-          }
-          p{
-            font-size: 20px;
-          }
-          a{
-            font-size: 18px;
-          }
-        }
-      }
-  
-    }
-    .history{
-      .timeline{
-        .content{
-          width: 200px;
-        }
-      }
-    }
-
-  }
-  
+}

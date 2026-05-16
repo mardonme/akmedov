@@ -1,0 +1,118 @@
+$brand: #4E428E;
+$brand-dark: #393582;
+$muted: #555;
+$border: rgba($brand, 0.15);
+
+.faq-container {
+  max-width: 900px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.faq-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid $border;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: rgba($brand, 0.35);
+  }
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: clamp(16px, 2vw, 19px);
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    color: $brand;
+    background-color: rgba($brand, 0.04);
+  }
+
+  &[aria-expanded="true"] {
+    color: $brand;
+  }
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba($brand, 0.1);
+  color: $brand;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  .faq-question[aria-expanded="true"] & {
+    background-color: $brand;
+    color: #fff;
+    transform: rotate(180deg);
+  }
+}
+
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+
+  &.open {
+    /* height is set inline from scrollHeight */
+  }
+}
+
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.65;
+  color: $muted;
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+    margin: 24px auto 60px;
+  }
+
+  .faq-question {
+    padding: 16px 18px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 18px 16px;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+  }
+}
