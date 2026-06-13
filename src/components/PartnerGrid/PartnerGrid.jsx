@@ -1,4 +1,5 @@
 import { partners } from "../../constants/partners";
+import OptImage from "../OptImage/OptImage";
 import "./PartnerGrid.scss";
 
 const PartnerGrid = ({ title = "Наши партнеры" }) => (
@@ -10,7 +11,7 @@ const PartnerGrid = ({ title = "Наши партнеры" }) => (
       <div data-aos="fade-up" className="fourth-container__wrapper">
         {partners.map((partner) => (
           <div key={partner.img} className="fourth-container__wrapper__item">
-            <img src={partner.img} alt={partner.alt} loading="lazy" />
+            <OptImage src={partner.img} alt={partner.alt} />
           </div>
         ))}
       </div>

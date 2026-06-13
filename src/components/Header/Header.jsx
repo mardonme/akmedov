@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useInfoContext } from "../../context/infoContext";
 import { contactInfo } from "../../constants/contacts";
+import OptImage from "../OptImage/OptImage";
 import "./Header.scss";
 
 const primaryNav = [
@@ -38,7 +39,7 @@ const Header = () => {
     <header className="header" ref={scroll}>
       <div className="container">
         <Link to="/" className="logo">
-          <img src="/images/logo.png" alt="logo" />
+          <OptImage src="/images/logo.png" alt="logo" eager />
         </Link>
 
         <nav className={`nav-links ${menuOpen ? "hidden" : ""}`}>

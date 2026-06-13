@@ -1,9 +1,9 @@
-@keyframes heroKenBurns {
-  0% {
-    transform: scale(1.04) translate3d(0, 0, 0);
+@keyframes heroZoom {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
   }
-  100% {
-    transform: scale(1.15) translate3d(-1.5%, -1%, 0);
+  to {
+    transform: scale(1.1) translate3d(-1%, -0.5%, 0);
   }
 }
 
@@ -55,10 +55,11 @@
 
   .sliders-item {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 
     // subtle vignette for legibility over any banner
     &::after {
@@ -77,18 +78,17 @@
     }
 
     img {
-      height: 100vh;
       width: 100%;
+      height: 100%;
       object-fit: cover;
-      transform: scale(1.04);
-      transition: transform 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+      transform: scale(1.02);
       will-change: transform;
     }
   }
 
-  // slow Ken Burns drift only on the active slide
+  // gentle zoom on the active slide
   .slick-active .sliders-item img {
-    animation: heroKenBurns 7s ease-out forwards;
+    animation: heroZoom 8s ease-out forwards;
   }
 
   // refined pagination dots
@@ -271,14 +271,8 @@
 }
 
 @media (max-width: 740px) {
-  .slider-container{
-    img{
-      width: 100vw;
-      height: 90vh;
-      margin: 0 auto;
-      object-fit: cover;
-
-    }
+  .slider-container .sliders-item {
+    height: 90vh;
   }
   .first {
     &-container {

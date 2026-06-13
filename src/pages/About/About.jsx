@@ -4,6 +4,7 @@ import PartnerGrid from "../../components/PartnerGrid/PartnerGrid";
 import { brands } from "../../constants/brands";
 import { timelineHighlights } from "../../constants/history";
 import { missionPoints } from "../../constants/mission";
+import OptImage from "../../components/OptImage/OptImage";
 import "./About.scss";
 
 const heroParagraphs = [
@@ -28,10 +29,13 @@ const About = () => (
           ))}
         </div>
         <div className="second-box__right" data-aos="fade-up">
-          <img
+          <OptImage
             src="/images/abouthed.jpg"
+            widths={[853, 600]}
+            sizes="(max-width: 1024px) 80vw, 561px"
             alt="О компании Akhmedov"
-            loading="eager"
+            eager
+            priority
           />
         </div>
       </div>
@@ -43,7 +47,7 @@ const About = () => (
         <div className="holding-box__wrapper">
           {brands.map((brand) => (
             <div key={brand.alt} className="holding-box__wrapper__item">
-              <img src={brand.img} alt={brand.alt} loading="lazy" />
+              <OptImage src={brand.img} alt={brand.alt} />
             </div>
           ))}
         </div>
@@ -67,11 +71,12 @@ const About = () => (
       </div>
       <div className="mission-inner">
         <div className="mission-image anim anim--image active">
-          <img
+          <OptImage
             className="lazyload"
             src="/images/krizymaxabout.jpg"
+            widths={[853, 600]}
+            sizes="(max-width: 768px) 92vw, 528px"
             alt="Наша миссия"
-            loading="lazy"
           />
         </div>
         <div className="mission-content">

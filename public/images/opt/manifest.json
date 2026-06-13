@@ -1,0 +1,464 @@
+{
+  "generatedFrom": "scripts/optimize-images.mjs",
+  "totalOrig": 226235864,
+  "totalWebp": 1955782,
+  "totalFallback": 3754900,
+  "images": [
+    {
+      "file": "choco.png",
+      "original": 15138683,
+      "webp": 301436,
+      "fallback": 505996,
+      "from": "5410x4000",
+      "widths": "1400,1024,640"
+    },
+    {
+      "file": "ves3.png",
+      "original": 12370810,
+      "webp": 26550,
+      "fallback": 55790,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "ves4.png",
+      "original": 10310989,
+      "webp": 31212,
+      "fallback": 70135,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo7.png",
+      "original": 10120619,
+      "webp": 20902,
+      "fallback": 67158,
+      "from": "2346x8053",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo6.png",
+      "original": 9965244,
+      "webp": 20346,
+      "fallback": 60392,
+      "from": "2345x8053",
+      "widths": "720"
+    },
+    {
+      "file": "ves5.png",
+      "original": 7858249,
+      "webp": 30286,
+      "fallback": 128438,
+      "from": "2326x3899",
+      "widths": "720"
+    },
+    {
+      "file": "rojki.png",
+      "original": 7668084,
+      "webp": 28098,
+      "fallback": 59312,
+      "from": "5000x5000",
+      "widths": "720"
+    },
+    {
+      "file": "ves2.png",
+      "original": 7603190,
+      "webp": 30876,
+      "fallback": 71996,
+      "from": "1822x4461",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey2.png",
+      "original": 6769873,
+      "webp": 40924,
+      "fallback": 92347,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey4.png",
+      "original": 6694560,
+      "webp": 57080,
+      "fallback": 100441,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "ves1.png",
+      "original": 6095426,
+      "webp": 26184,
+      "fallback": 74543,
+      "from": "1822x4461",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey3.png",
+      "original": 6012970,
+      "webp": 40134,
+      "fallback": 85563,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey5.png",
+      "original": 5692088,
+      "webp": 27116,
+      "fallback": 68513,
+      "from": "4500x4500",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey1.png",
+      "original": 5519897,
+      "webp": 38948,
+      "fallback": 93288,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo3.png",
+      "original": 4778086,
+      "webp": 27596,
+      "fallback": 59340,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM5.png",
+      "original": 4625518,
+      "webp": 23966,
+      "fallback": 69281,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo1.png",
+      "original": 4581606,
+      "webp": 24100,
+      "fallback": 57342,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo2.png",
+      "original": 4553089,
+      "webp": 24520,
+      "fallback": 57569,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM3.png",
+      "original": 4431488,
+      "webp": 25522,
+      "fallback": 70863,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM4.png",
+      "original": 4304349,
+      "webp": 27772,
+      "fallback": 75806,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "1.png",
+      "original": 4300486,
+      "webp": 32644,
+      "fallback": 69014,
+      "from": "1253x3159",
+      "widths": "720"
+    },
+    {
+      "file": "2.png",
+      "original": 4256885,
+      "webp": 30648,
+      "fallback": 67572,
+      "from": "1253x3159",
+      "widths": "720"
+    },
+    {
+      "file": "3.png",
+      "original": 4235151,
+      "webp": 33348,
+      "fallback": 66013,
+      "from": "1253x3159",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM1.png",
+      "original": 4120824,
+      "webp": 30034,
+      "fallback": 81500,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM2.png",
+      "original": 3978190,
+      "webp": 26288,
+      "fallback": 66823,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "SirokM.png",
+      "original": 3973620,
+      "webp": 29786,
+      "fallback": 78573,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки5.png",
+      "original": 3817262,
+      "webp": 17008,
+      "fallback": 33925,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "ves6.png",
+      "original": 3798574,
+      "webp": 31740,
+      "fallback": 62738,
+      "from": "3264x2800",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки4.png",
+      "original": 3657836,
+      "webp": 17904,
+      "fallback": 31876,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy6.png",
+      "original": 3540829,
+      "webp": 23508,
+      "fallback": 46894,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки3.png",
+      "original": 3375842,
+      "webp": 16648,
+      "fallback": 32313,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy7.png",
+      "original": 3241819,
+      "webp": 22610,
+      "fallback": 41987,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy2.png",
+      "original": 3238754,
+      "webp": 29840,
+      "fallback": 43209,
+      "from": "4000x2667",
+      "widths": "720"
+    },
+    {
+      "file": "Sirokoff1.png",
+      "original": 3059551,
+      "webp": 14990,
+      "fallback": 30259,
+      "from": "4500x4500",
+      "widths": "720"
+    },
+    {
+      "file": "Sirokoff2.png",
+      "original": 2889721,
+      "webp": 11440,
+      "fallback": 26961,
+      "from": "4500x4500",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy.png",
+      "original": 2872687,
+      "webp": 25796,
+      "fallback": 34177,
+      "from": "4000x2667",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки1.png",
+      "original": 2864127,
+      "webp": 17244,
+      "fallback": 32435,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки.png",
+      "original": 2825229,
+      "webp": 16794,
+      "fallback": 30680,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Sirokoff4.png",
+      "original": 2814318,
+      "webp": 12810,
+      "fallback": 25425,
+      "from": "4500x4500",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy5.png",
+      "original": 2806670,
+      "webp": 20074,
+      "fallback": 38232,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "Sirokoff3.png",
+      "original": 2715333,
+      "webp": 11350,
+      "fallback": 24427,
+      "from": "4500x4500",
+      "widths": "720"
+    },
+    {
+      "file": "Kreasy4.png",
+      "original": 2647492,
+      "webp": 22092,
+      "fallback": 36803,
+      "from": "3750x1171",
+      "widths": "720"
+    },
+    {
+      "file": "Сыробушки2.png",
+      "original": 2549612,
+      "webp": 15530,
+      "fallback": 31504,
+      "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo5.png",
+      "original": 804255,
+      "webp": 16156,
+      "fallback": 38822,
+      "from": "1537x2049",
+      "widths": "720"
+    },
+    {
+      "file": "logo.png",
+      "original": 612944,
+      "webp": 44704,
+      "fallback": 46683,
+      "from": "6048x1820",
+      "widths": "1400"
+    },
+    {
+      "file": "eskimo4.png",
+      "original": 589705,
+      "webp": 13798,
+      "fallback": 27383,
+      "from": "1537x2049",
+      "widths": "720"
+    },
+    {
+      "file": "home_bg.png",
+      "original": 508441,
+      "webp": 75878,
+      "fallback": 121385,
+      "from": "1080x1350",
+      "widths": "1350"
+    },
+    {
+      "file": "krizymaxabout.jpg",
+      "original": 236594,
+      "webp": 202870,
+      "fallback": 242666,
+      "from": "853x1280",
+      "widths": "853,600"
+    },
+    {
+      "file": "abouthed.jpg",
+      "original": 174031,
+      "webp": 109222,
+      "fallback": 163616,
+      "from": "853x1068",
+      "widths": "853,600"
+    },
+    {
+      "file": "part2.png",
+      "original": 141032,
+      "webp": 9730,
+      "fallback": 31134,
+      "from": "640x480",
+      "widths": "400"
+    },
+    {
+      "file": "Bombey.jpg",
+      "original": 137123,
+      "webp": 33040,
+      "fallback": 44936,
+      "from": "847x873",
+      "widths": "560"
+    },
+    {
+      "file": "part1.png",
+      "original": 111769,
+      "webp": 19958,
+      "fallback": 17383,
+      "from": "600x325",
+      "widths": "400"
+    },
+    {
+      "file": "СЫТЫЙ_ДОМ.jpg",
+      "original": 107155,
+      "webp": 21908,
+      "fallback": 32150,
+      "from": "913x862",
+      "widths": "560"
+    },
+    {
+      "file": "kreasymaxabout.jpg",
+      "original": 71601,
+      "webp": 11196,
+      "fallback": 14597,
+      "from": "1280x445",
+      "widths": "560"
+    },
+    {
+      "file": "part.png",
+      "original": 46653,
+      "webp": 7364,
+      "fallback": 8054,
+      "from": "600x266",
+      "widths": "400"
+    },
+    {
+      "file": "part.jpg",
+      "original": 16092,
+      "webp": 4338,
+      "fallback": 6558,
+      "from": "504x303",
+      "widths": "400"
+    },
+    {
+      "file": "part3.png",
+      "original": 2839,
+      "webp": 1926,
+      "fallback": 2080,
+      "from": "312x162",
+      "widths": "312"
+    }
+  ]
+}

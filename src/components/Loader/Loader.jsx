@@ -1,3 +1,4 @@
+import OptImage from "../OptImage/OptImage";
 import "./Loader.scss";
 
 const Loader = ({ onDismiss }) => (
@@ -12,7 +13,7 @@ const Loader = ({ onDismiss }) => (
     aria-label="Войти на сайт"
   >
     <div className="content">
-      <img src="/images/logo.png" alt="Akhmedov" />
+      <OptImage src="/images/logo.png" alt="Akhmedov" eager priority />
     </div>
   </div>
 );

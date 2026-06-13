@@ -5,6 +5,7 @@ import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import PartnerGrid from "../../components/PartnerGrid/PartnerGrid";
 import { banners } from "../../constants/banners";
 import { heroSliderSettings } from "../../constants/sliders";
+import OptImage from "../../components/OptImage/OptImage";
 import "./Home.scss";
 
 const MOBILE_BREAKPOINT = 500;
@@ -19,11 +20,15 @@ const Home = () => {
         <div className="slider-container">
           <Slider {...heroSliderSettings}>
             {banners.map((banner, idx) => (
+              // Banner images load straight from /images/ (not /images/opt/),
+              // so swapping a file in public/images/ updates the hero directly.
               <div key={idx} className="sliders-item">
                 <img
                   src={isMobile ? banner.mobile : banner.desktop}
                   alt={`Banner ${idx + 1}`}
                   loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : undefined}
+                  decoding="async"
                 />
               </div>
             ))}
@@ -48,7 +53,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="first-container__right" data-aos="fade-left">
-            <img src="/images/choco.png" alt="Мороженое Akhmedov" loading="lazy" />
+            <OptImage
+              src="/images/choco.png"
+              widths={[1400, 1024, 640]}
+              sizes="(max-width: 1100px) 90vw, 600px"
+              alt="Мороженое Akhmedov"
+            />
           </div>
         </div>
       </section>
