@@ -16,7 +16,7 @@ const About = lazy(() => import("./pages/About/About"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
 // 404
-const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+// const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/made", element: <Made /> },
@@ -26,7 +26,7 @@ const routes = [
   { path: "/catalog", element: <Catalog /> },
   { path: "/contact", element: <Contact /> },
   // 404
-  { path: "*", element: <NotFound /> }
+  // { path: "*", element: <NotFound /> }
 ];
 
 const App = () => {
@@ -40,11 +40,13 @@ const App = () => {
       <main>
         <Suspense fallback={<PageFallback />}>
           <Routes>
-            {/* {routes.map(({ path, element }) => (
+            
+            {routes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
-            ))} */}
+            ))}
+            <Route path="*" element={<Navigate to="/" replace />} />
             {/* 404 */}
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </Suspense>
       </main>
