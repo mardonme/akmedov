@@ -85,37 +85,45 @@ const Footer = () => {
             <div className="footer-contact">
               <h2 className="footer__title">Контактная информация</h2>
 
-              <div className="contact-group">
-                <p className="contact-label">Для потребителей:</p>
-                <a
-                  href={contactInfo.phones.consumers.href}
-                  className="contact-number"
-                >
-                  {contactInfo.phones.consumers.label}
-                </a>
-              </div>
+              {contactInfo.phones.consumers && (
+                <div className="contact-group">
+                  <p className="contact-label">Для потребителей:</p>
+                  <a
+                    href={contactInfo.phones.consumers.href}
+                    className="contact-number"
+                  >
+                    {contactInfo.phones.consumers.label}
+                  </a>
+                </div>
+              )}
 
-              <p className="contact-label">Для сотрудничества:</p>
+              {(contactInfo.phones.tashkent || contactInfo.phones.regions) && (
+                <p className="contact-label">Для сотрудничества:</p>
+              )}
 
-              <div className="contact-group">
-                <p className="contact-city">Ташкент:</p>
-                <a
-                  href={contactInfo.phones.tashkent.href}
-                  className="contact-number"
-                >
-                  {contactInfo.phones.tashkent.label}
-                </a>
-              </div>
+              {contactInfo.phones.tashkent && (
+                <div className="contact-group">
+                  <p className="contact-city">Ташкент:</p>
+                  <a
+                    href={contactInfo.phones.tashkent.href}
+                    className="contact-number"
+                  >
+                    {contactInfo.phones.tashkent.label}
+                  </a>
+                </div>
+              )}
 
-              <div className="contact-group">
-                <p className="contact-city">Регионы:</p>
-                <a
-                  href={contactInfo.phones.regions.href}
-                  className="contact-number"
-                >
-                  {contactInfo.phones.regions.label}
-                </a>
-              </div>
+              {contactInfo.phones.regions && (
+                <div className="contact-group">
+                  <p className="contact-city">Регионы:</p>
+                  <a
+                    href={contactInfo.phones.regions.href}
+                    className="contact-number"
+                  >
+                    {contactInfo.phones.regions.label}
+                  </a>
+                </div>
+              )}
             </div>
 
             <div className="footer-social">

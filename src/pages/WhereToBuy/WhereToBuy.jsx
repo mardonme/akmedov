@@ -41,10 +41,18 @@ const WhereToBuy = () => (
           ))}
         </ul>
         <div className="contacts">
-          <p>Для потребителей: {contactInfo.phones.consumers.label}</p>
-          <p>Для сотрудничества:</p>
-          <p>Ташкент: {contactInfo.phones.tashkent.label}</p>
-          <p>Регионы: {contactInfo.phones.regions.label}</p>
+          {contactInfo.phones.consumers && (
+            <p>Для потребителей: {contactInfo.phones.consumers.label}</p>
+          )}
+          {(contactInfo.phones.tashkent || contactInfo.phones.regions) && (
+            <p>Для сотрудничества:</p>
+          )}
+          {contactInfo.phones.tashkent && (
+            <p>Ташкент: {contactInfo.phones.tashkent.label}</p>
+          )}
+          {contactInfo.phones.regions && (
+            <p>Регионы: {contactInfo.phones.regions.label}</p>
+          )}
         </div>
       </section>
 
