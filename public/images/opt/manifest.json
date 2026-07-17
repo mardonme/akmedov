@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 226235864,
-  "totalWebp": 1955782,
-  "totalFallback": 3754900,
+  "totalOrig": 238607219,
+  "totalWebp": 1950394,
+  "totalFallback": 3779505,
   "images": [
     {
       "file": "choco.png",
@@ -11,6 +11,14 @@
       "fallback": 505996,
       "from": "5410x4000",
       "widths": "1400,1024,640"
+    },
+    {
+      "file": "bombey.png",
+      "original": 12508478,
+      "webp": 27652,
+      "fallback": 69541,
+      "from": "10193x5165",
+      "widths": "560"
     },
     {
       "file": "ves3.png",
@@ -403,14 +411,6 @@
       "fallback": 31134,
       "from": "640x480",
       "widths": "400"
-    },
-    {
-      "file": "Bombey.jpg",
-      "original": 137123,
-      "webp": 33040,
-      "fallback": 44936,
-      "from": "847x873",
-      "widths": "560"
     },
     {
       "file": "part1.png",

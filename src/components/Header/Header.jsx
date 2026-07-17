@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useInfoContext } from "../../context/infoContext";
 import { contactInfo } from "../../constants/contacts";
 import OptImage from "../OptImage/OptImage";
@@ -8,30 +8,54 @@ import "./Header.scss";
 const primaryNav = [
   { to: "/about", label: "О компании" },
   { to: "/made", label: "Отдел производства" },
-  { to: "/catalog", label: "Продукция" },
+  {
+    to: "/catalog",
+    label: "Продукция",
+    dropdown: [
+      { to: "/catalog/icecream", label: "Мороженое" },
+      { to: "/catalog/syroki", label: "Творожные сырки" },
+    ],
+  },
   { to: "/contact", label: "Контакты" },
   { to: "/buy", label: "Где купить?" },
 ];
 
 const mobileNav = [
   { to: "/about", label: "О компании" },
-  { to: "/catalog", label: "Продукция" },
+  { to: "/catalog/icecream", label: "Мороженое" },
+  { to: "/catalog/syroki", label: "Творожные сырки" },
   { to: "/contact", label: "Контакты" },
 ];
 
 const bottomNav = [
   { to: "/", label: "Домой", icon: "bx-home-smile" },
   { to: "/about", label: "О компании", icon: "bx-package" },
-  { to: "/catalog", label: "Продукция", icon: "bx-basket" },
+  { to: "/catalog/icecream", label: "Мороженое", icon: "bx-basket" },
+  { to: "/catalog/syroki", label: "Сырки", icon: "bx-heart" },
   { to: "/contact", label: "Контакты", icon: "bx-universal-access" },
 ];
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { scroll } = useInfoContext();
+  const location = useLocation();
+  const dropdownRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const headerPhone = contactInfo.phones.header;
 
@@ -43,11 +67,45 @@ const Header = () => {
         </Link>
 
         <nav className={`nav-links ${menuOpen ? "hidden" : ""}`}>
-          {primaryNav.map((item) => (
-            <NavLink key={item.to} to={item.to}>
-              {item.label}
-            </NavLink>
-          ))}
+          {primaryNav.map((item) => {
+            if (item.dropdown) {
+              const isCatalogActive = location.pathname.startsWith("/catalog");
+              return (
+                <div 
+                  key={item.to} 
+                  className={`nav-dropdown ${dropdownOpen ? "open" : ""}`}
+                  ref={dropdownRef}
+                >
+                  <button
+                    type="button"
+                    onClick={() => setDropdownOpen((prev) => !prev)}
+                    className={`nav-dropdown-trigger ${isCatalogActive ? "active" : ""}`}
+                  >
+                    {item.label} <i className="bx bx-chevron-down" style={{ marginLeft: "2px", verticalAlign: "middle" }} />
+                  </button>
+                  <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                    {item.dropdown.map((subItem) => (
+                      <NavLink 
+                        key={subItem.to} 
+                        to={subItem.to} 
+                        onClick={() => {
+                          setDropdownOpen(false);
+                          closeMenu();
+                        }}
+                      >
+                        {subItem.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <NavLink key={item.to} to={item.to}>
+                {item.label}
+              </NavLink>
+            );
+          })}
         </nav>
 
         <div className={`contact ${menuOpen ? "hidden" : ""}`}>

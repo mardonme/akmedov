@@ -15,18 +15,16 @@ const WhereToBuy = lazy(() => import("./pages/WhereToBuy/WhereToBuy"));
 const About = lazy(() => import("./pages/About/About"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
-// 404
-// const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/made", element: <Made /> },
   { path: "/history", element: <History /> },
   { path: "/buy", element: <WhereToBuy /> },
   { path: "/about", element: <About /> },
-  { path: "/catalog", element: <Catalog /> },
-  { path: "/contact", element: <Contact /> },
-  // 404
-  // { path: "*", element: <NotFound /> }
+  { path: "/catalog/icecream", element: <Catalog category="icecream" /> },
+  { path: "/catalog/syroki", element: <Catalog category="syroki" /> },
+  { path: "/catalog", element: <Navigate to="/catalog/icecream" replace /> },
+  { path: "/contact", element: <Contact /> }
 ];
 
 const App = () => {
@@ -45,8 +43,6 @@ const App = () => {
               <Route key={path} path={path} element={element} />
             ))}
             <Route path="*" element={<Navigate to="/" replace />} />
-            {/* 404 */}
-            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </Suspense>
       </main>

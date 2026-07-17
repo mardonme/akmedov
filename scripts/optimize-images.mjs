@@ -67,7 +67,7 @@ const SPEC = [
   // About — brand grid logos (~260px cells)
   { name: "kreasymaxabout", ext: "jpg", kind: "fixed", box: 560 },
   { name: "СЫТЫЙ_ДОМ", ext: "jpg", kind: "fixed", box: 560 },
-  { name: "Bombey", ext: "jpg", kind: "fixed", box: 560 },
+  { name: "bombey", ext: "png", kind: "fixed", box: 560 },
 
   // Partner logos (~178px cells)
   ...["part", "part1", "part2", "part3"].map((n) => ({ name: n, ext: "png", kind: "fixed", box: 400 })),
