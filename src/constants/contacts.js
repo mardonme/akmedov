@@ -2,7 +2,7 @@ export const contactInfo = {
   address: 'OOO "SABE", г. Сырдарья, Сырдарьинская область, туманный центр Рахимов, улица Достлик, дом 20.',
   phones: {
     regions: { label: "+998 90 043-04-83", href: "tel:+998900430483" },
-    header: { label: "50 111 77 33", href: "tel:+998501117733" },
+    header: { label: "+998 90 813-30-00", href: "tel:+998908133000" },
     order: "+998900514841",
   },
   socials: {
