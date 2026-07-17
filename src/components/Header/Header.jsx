@@ -25,6 +25,7 @@ const mobileNav = [
   { to: "/catalog/icecream", label: "Мороженое" },
   { to: "/catalog/syroki", label: "Творожные сырки" },
   { to: "/contact", label: "Контакты" },
+  { to: "/buy", label: "Где купить?" },
 ];
 
 const bottomNav = [
