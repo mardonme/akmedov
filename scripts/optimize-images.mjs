@@ -42,6 +42,7 @@ const products = [
   "Сыробушки", "Сыробушки1", "Сыробушки2", "Сыробушки3", "Сыробушки4", "Сыробушки5",
   "Sirokoff1", "Sirokoff2", "Sirokoff3", "Sirokoff4",
   "SirokM", "SirokM1", "SirokM2", "SirokM3", "SirokM4", "SirokM5",
+  "melon1", "melon2", "melon3", "melon4",
 ].map((n) => ({ name: n, ext: "png", kind: "fixed", box: 720 }));
 
 const SPEC = [
@@ -68,6 +69,7 @@ const SPEC = [
   { name: "kreasymaxabout", ext: "jpg", kind: "fixed", box: 560 },
   { name: "СЫТЫЙ_ДОМ", ext: "jpg", kind: "fixed", box: 560 },
   { name: "bombey", ext: "png", kind: "fixed", box: 560 },
+  { name: "melon", ext: "png", kind: "fixed", box: 560 },
 
   // Partner logos (~178px cells)
   ...["part", "part1", "part2", "part3"].map((n) => ({ name: n, ext: "png", kind: "fixed", box: 400 })),

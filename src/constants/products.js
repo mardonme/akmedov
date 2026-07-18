@@ -55,6 +55,16 @@ export const catalogSections = [
           { img: "/images/ves5.png", name: "Мороженое пломбир с карамельной начинкой в молочной глазури" },
           { img: "/images/ves6.png", name: "Мороженое пломбир с карамельной начинкой в шоколадной глазури" },
         ],
+      },
+      {
+        subtitle: "Сорбет",
+        rowClass: "sorbets",
+        items: [
+          { img: "/images/melon4.png", name: "Сорбет с натуральным пьюре дыни" },
+          { img: "/images/melon1.png", name: "Сорбет с натуральным пьюре вишни" },
+          { img: "/images/melon2.png", name: "Сорбет с натуральным пьюре лесных ягод" },
+          { img: "/images/melon3.png", name: "Сорбет с натуральным пьюре манго" },
+        ],
       }
     ],
   },

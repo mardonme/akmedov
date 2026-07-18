@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 238607219,
-  "totalWebp": 1950394,
-  "totalFallback": 3779505,
+  "totalOrig": 241041703,
+  "totalWebp": 2087144,
+  "totalFallback": 4081029,
   "images": [
     {
       "file": "choco.png",
@@ -365,6 +365,14 @@
       "widths": "720"
     },
     {
+      "file": "melon2.png",
+      "original": 631480,
+      "webp": 34218,
+      "fallback": 74555,
+      "from": "1086x420",
+      "widths": "720"
+    },
+    {
       "file": "logo.png",
       "original": 612944,
       "webp": 44704,
@@ -373,11 +381,35 @@
       "widths": "1400"
     },
     {
+      "file": "melon3.png",
+      "original": 608622,
+      "webp": 29470,
+      "fallback": 75148,
+      "from": "1086x535",
+      "widths": "720"
+    },
+    {
+      "file": "melon1.png",
+      "original": 599993,
+      "webp": 30856,
+      "fallback": 79282,
+      "from": "1086x520",
+      "widths": "720"
+    },
+    {
       "file": "eskimo4.png",
       "original": 589705,
       "webp": 13798,
       "fallback": 27383,
       "from": "1537x2049",
+      "widths": "720"
+    },
+    {
+      "file": "melon4.png",
+      "original": 555572,
+      "webp": 28482,
+      "fallback": 67058,
+      "from": "1182x406",
       "widths": "720"
     },
     {
@@ -443,6 +475,14 @@
       "fallback": 8054,
       "from": "600x266",
       "widths": "400"
+    },
+    {
+      "file": "melon.png",
+      "original": 38817,
+      "webp": 13724,
+      "fallback": 5481,
+      "from": "1184x453",
+      "widths": "560"
     },
     {
       "file": "part.jpg",

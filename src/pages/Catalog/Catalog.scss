@@ -17,6 +17,19 @@
       margin-top: -100px;
     }
   }
+  .sorbets {
+    .catalog-container__wrapper__box__row__item {
+      img {
+        width: 100%;
+        max-width: 250px;
+        height: 120px;
+        object-fit: contain;
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
   h2{
     margin: 50px 0;
     font-family: 'Pribambas', sans-serif;
