@@ -107,6 +107,94 @@ export const catalogSections = [
   },
 ];
 
+/**
+ * Appetite-first intro block shown above the product list on /catalog/*.
+ * Keyed by the `category` prop of the Catalog page ("icecream" | "syroki").
+ * Images must exist in public/images/ (they are rendered through <OptImage>,
+ * so their optimized twins in public/images/opt/ are what actually load).
+ */
+export const catalogHeroes = {
+  icecream: {
+    // eyebrow: "Продукция Akhmedov",
+    title: "Холодное счастье",
+    accent: "в каждом кусочке",
+    // text: "Густой пломбир на цельном молоке, хрустящая вафля, шоколадная глазурь, которая ломается с тем самым «крак», и сорбеты из натурального фруктового пюре. Выберите вкус — остальное растает само.",
+    // sticker: "Тает во рту",
+    // flavors: [
+    //   { emoji: "🍫", label: "Шоколад" },
+    //   { emoji: "🍓", label: "Клубника" },
+    //   { emoji: "🍒", label: "Вишня" },
+    //   { emoji: "🥭", label: "Манго" },
+    //   { emoji: "☕", label: "Кофе" },
+    //   { emoji: "🍯", label: "Карамель" },
+    // ],
+    stats: [
+      { value: "30+", label: "вкусов в линейке" },
+      { value: "20", label: "лет на рынке" },
+      { value: "100%", label: "натуральное молоко" },
+    ],
+    cta: "Смотреть ассортимент",
+    // First image is the centrepiece, the rest float around it.
+    images: [
+      {
+        src: "/images/rojki.png",
+        alt: "Вафельный рожок «Сытый Дом» с бельгийским шоколадом",
+        width: "min(72%, 330px)",
+      },
+      {
+        src: "/images/Kreasy.png",
+        alt: "Крези Макс лесные ягоды",
+        width: "min(58%, 260px)",
+      },
+      {
+        src: "/images/Bombey1.png",
+        alt: "БОМБЕЙ с варёной сгущёнкой в вафельной крошке",
+        width: "min(42%, 180px)",
+      },
+    ],
+  },
+  syroki: {
+    // eyebrow: "Продукция Akhmedov",
+    title: "Нежный творог",
+    accent: "в хрустящей глазури",
+    // text: "Взбитый до кремовой текстуры творог и толстый слой глазури — молочной, тёмной, карамельной или клубничной. Идеальный перекус, который одинаково любят и дети, и взрослые.",
+    // sticker: "Хрустит и тает",
+    // flavors: [
+    //   { emoji: "🍫", label: "Тёмная глазурь" },
+    //   { emoji: "🥛", label: "Молочная" },
+    //   { emoji: "🍮", label: "Карамель" },
+    //   { emoji: "🍓", label: "Клубника" },
+    //   { emoji: "🍊", label: "Апельсин" },
+    //   { emoji: "☕", label: "Кофе" },
+    // ],
+    stats: [
+      { value: "16", label: "вкусов в линейке" },
+      { value: "3", label: "формата упаковки" },
+      { value: "100%", label: "натуральный творог" },
+    ],
+    cta: "Смотреть ассортимент",
+    // First image is the centrepiece, the rest float around it.
+    images: [
+      
+      {
+        src: "/images/Сыробушки.png",
+        alt: "Творожные палочки в апельсиновой глазури",
+        width: "min(100%, 440px)",
+      },
+{
+        src: "/images/SirokM2.png",
+        alt: "Сырок творожный кофейный в молочной глазури",
+        width: "min(62%, 230px)",
+      },
+      {
+        src: "/images/SirokM.png",
+        alt: "Сырок творожный пломбир в молочной глазури",
+        width: "min(38%, 165px)",
+      },
+    ],
+  },
+};
+
 export const catalogDownloads = [
   { href: "/images/ahmedov_katalog.pdf", file: "ahmedov_katalog.pdf", label: "Каталог Мороженого" },
   { href: "/images/newcatalog.pdf", file: "newcatalog.pdf", label: "Новый каталог" },

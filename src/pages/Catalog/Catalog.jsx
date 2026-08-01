@@ -1,8 +1,16 @@
+import { useRef } from "react";
 import ProductSection from "../../components/ProductSection/ProductSection";
-import { catalogSections, catalogDownloads } from "../../constants/products";
+import CatalogHero from "../../components/CatalogHero/CatalogHero";
+import {
+  catalogSections,
+  catalogDownloads,
+  catalogHeroes,
+} from "../../constants/products";
 import "./Catalog.scss";
 
 const Catalog = ({ category }) => {
+  const listRef = useRef(null);
+
   const filteredSections = catalogSections.filter((section) => {
     if (category === "icecream") {
       return section.title === "Мороженое";
@@ -23,10 +31,25 @@ const Catalog = ({ category }) => {
     return true;
   });
 
+  const hero = catalogHeroes[category] || catalogHeroes.icecream;
+
+  const scrollToList = () =>
+    listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <section className="catalog">
       <div className="container catalog-container">
-        <h1 data-aos="fade-left" className="catalog-container__title">
+        <CatalogHero
+          hero={hero}
+          download={filteredDownloads[0]}
+          onExplore={scrollToList}
+        />
+
+        <h1
+          ref={listRef}
+          data-aos="fade-left"
+          className="catalog-container__title"
+        >
           Список продуктов{" "}
           {filteredDownloads.map(({ href, file, label }) => (
             <a key={file} href={href} download={file}>
