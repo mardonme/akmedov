@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 241041703,
-  "totalWebp": 2087144,
-  "totalFallback": 4081029,
+  "totalOrig": 246170214,
+  "totalWebp": 2153706,
+  "totalFallback": 4209756,
   "images": [
     {
       "file": "choco.png",
@@ -354,6 +354,30 @@
       "webp": 15530,
       "fallback": 31504,
       "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "pankie4.png",
+      "original": 1837823,
+      "webp": 22278,
+      "fallback": 44187,
+      "from": "3000x2000",
+      "widths": "720"
+    },
+    {
+      "file": "pankie2.png",
+      "original": 1726826,
+      "webp": 22498,
+      "fallback": 42559,
+      "from": "3000x2000",
+      "widths": "720"
+    },
+    {
+      "file": "pankie3.png",
+      "original": 1563862,
+      "webp": 21786,
+      "fallback": 41981,
+      "from": "3000x2000",
       "widths": "720"
     },
     {

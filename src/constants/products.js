@@ -34,6 +34,14 @@ export const catalogSections = [
         ],
       },
       {
+        subtitle: "Pankie — Бисквитное мороженое",
+        items: [
+          { img: "/images/pankie2.png", name: "Pankie бисквитное мороженое пломбир" },
+          { img: "/images/pankie3.png", name: "Pankie бисквитное в шоколадной глазури" },
+          { img: "/images/pankie4.png", name: "Pankie бисквитное мороженое шоколадное" },
+        ],
+      },
+      {
         subtitle: "Эскимо на палочке",
         items: [
           { img: "/images/eskimo1.png", name: "Двухслойное эскимо в молочной глазури" },
