@@ -8,12 +8,13 @@ import { heroSliderSettings } from "../../constants/sliders";
 import OptImage from "../../components/OptImage/OptImage";
 import "./Home.scss";
 
+// Below this width the portrait banner is served. Home.scss flips the slide
+// box to 9:16 at the same width — the two must stay in sync, which is why the
+// swap is a <source> media query and not a JS width check: a JS check is read
+// once at mount, so a resize would leave a landscape banner in a 9:16 box.
 const MOBILE_BREAKPOINT = 500;
 
 const Home = () => {
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
-
   return (
     <>
       <section className="first">
@@ -23,13 +24,19 @@ const Home = () => {
               // Banner images load straight from /images/ (not /images/opt/),
               // so swapping a file in public/images/ updates the hero directly.
               <div key={idx} className="sliders-item">
-                <img
-                  src={isMobile ? banner.mobile : banner.desktop}
-                  alt={`Banner ${idx + 1}`}
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  fetchPriority={idx === 0 ? "high" : undefined}
-                  decoding="async"
-                />
+                <picture>
+                  <source
+                    media={`(max-width: ${MOBILE_BREAKPOINT}px)`}
+                    srcSet={banner.mobile}
+                  />
+                  <img
+                    src={banner.desktop}
+                    alt={`Banner ${idx + 1}`}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    fetchPriority={idx === 0 ? "high" : undefined}
+                    decoding="async"
+                  />
+                </picture>
               </div>
             ))}
           </Slider>
