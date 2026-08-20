@@ -1,0 +1,179 @@
+// Geometry of one column: the year sits in a fixed-height row, the axis runs
+// along its bottom edge, and the card hangs below. Every offset here is derived
+// from these two numbers, so the axis, the dots and the cards stay locked
+// together at any font size.
+$year-row: clamp(44px, 4.4vw, 60px);
+$axis-drop: clamp(20px, 2.2vw, 30px);
+
+.timeline {
+  --ink: #4e428e;
+  --ink-soft: rgba(78, 66, 142, 0.14);
+  --card-w: clamp(248px, 74vw, 320px);
+  --gap: clamp(16px, 2vw, 28px);
+  --edge-fade: 52px;
+
+  position: relative;
+  margin-top: clamp(20px, 2.4vw, 32px);
+  text-align: left;
+
+  &__viewport {
+    --fade-l: 0px;
+    --fade-r: 0px;
+
+    overflow-x: auto;
+    // Keep a swipe on the rail from turning into a browser back-gesture or a
+    // scroll of the page behind it.
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 2px;
+
+    // App.css hides scrollbars site-wide already; this keeps Firefox in line.
+    scrollbar-width: none;
+
+    // Fade only the side that actually has more content behind it. This is the
+    // whole point of tracking scroll position: a card is never chopped off
+    // mid-sentence by a hard edge, and the fade itself reads as "keep going".
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0,
+      #000 var(--fade-l),
+      #000 calc(100% - var(--fade-r)),
+      transparent 100%
+    );
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.is-clipped-start {
+      --fade-l: var(--edge-fade);
+    }
+
+    &.is-clipped-end {
+      --fade-r: var(--edge-fade);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 6px;
+      border-radius: 20px;
+    }
+  }
+
+  &__track {
+    position: relative;
+    display: flex;
+    // stretch + the 1fr card row below is what gives every card the same
+    // height regardless of how much text it holds.
+    align-items: stretch;
+    gap: var(--gap);
+    width: max-content;
+    margin: 0;
+    padding: 0 2px 8px;
+    list-style: none;
+
+    // The axis belongs to the track, not the viewport: the track is the
+    // scrolled content, so 100% here is the full timeline, not just the part
+    // currently on screen.
+    &::before {
+      content: "";
+      position: absolute;
+      top: $year-row;
+      right: 0;
+      left: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(78, 66, 142, 0.08) 0%,
+        rgba(78, 66, 142, 0.32) 8%,
+        rgba(78, 66, 142, 0.32) 92%,
+        rgba(78, 66, 142, 0.08) 100%
+      );
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-rows: $year-row auto 1fr;
+    flex: 0 0 auto;
+    width: var(--card-w);
+    scroll-snap-align: start;
+  }
+
+  &__year {
+    align-self: center;
+    font-size: clamp(26px, 2.9vw, 38px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    // Tabular figures keep every year the same width, so the dots below them
+    // stay evenly spaced instead of drifting with the digits.
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    transition: color 0.25s ease;
+  }
+
+  &__marker {
+    position: relative;
+    z-index: 1;
+    justify-self: start;
+    align-self: start;
+    width: 14px;
+    height: 14px;
+    // Pulls the 14px dot up so its centre lands on the 2px axis.
+    margin-top: -6px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: var(--ink);
+    box-shadow: 0 0 0 3px var(--ink-soft);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  &__card {
+    margin: $axis-drop 0 0;
+    padding: clamp(16px, 1.6vw, 22px);
+    border: 1px solid rgba(78, 66, 142, 0.1);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 16px 32px -24px rgba(30, 26, 60, 0.9);
+    color: #4a4560;
+    font-size: 15px;
+    line-height: 1.65;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  &__item:hover {
+    .timeline__marker {
+      transform: scale(1.28);
+      box-shadow: 0 0 0 6px var(--ink-soft);
+    }
+
+    .timeline__card {
+      transform: translateY(-4px);
+      border-color: rgba(78, 66, 142, 0.2);
+      box-shadow: 0 26px 40px -26px rgba(30, 26, 60, 0.95);
+    }
+  }
+}
+
+// The rail is swipe / trackpad driven; the faded edge is what says "keep
+// going", so it needs to stay visible but unobtrusive on small screens.
+@media (max-width: 640px) {
+  .timeline {
+    --edge-fade: 32px;
+
+    &__card {
+      font-size: 14px;
+    }
+  }
+}

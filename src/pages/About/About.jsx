@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import PartnerGrid from "../../components/PartnerGrid/PartnerGrid";
+import Timeline from "../../components/Timeline/Timeline";
 import { brands } from "../../constants/brands";
 import { timelineHighlights } from "../../constants/history";
 import { missionPoints } from "../../constants/mission";
@@ -99,16 +100,7 @@ const About = () => (
           Подробнее <i className="bx bx-right-arrow-alt" aria-hidden="true" />
         </Link>
       </div>
-      <div className="timeline">
-        {timelineHighlights.map((item) => (
-          <div key={item.year} className="timeline-item">
-            <div className="circle">{item.year}</div>
-            <div className="content">
-              <p>{item.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Timeline items={timelineHighlights} />
     </section>
 
     <PartnerGrid />
