@@ -50,7 +50,7 @@ const Catalog = ({ category }) => {
           data-aos="fade-left"
           className="catalog-container__title"
         >
-          Список продуктов{" "}
+          Наша продукция{" "}
           {filteredDownloads.map(({ href, file, label }) => (
             <a key={file} href={href} download={file}>
               {label} <i className="bx bx-down-arrow-alt" />

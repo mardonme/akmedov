@@ -11,7 +11,7 @@ const footerMenus = [
     trailing: { label: "Контакты", href: "/contact" },
   },
   {
-    heading: { label: "Список продуктов", href: "/catalog" },
+    heading: { label: "Наша продукция", href: "/catalog" },
     links: ["Наша миссия", "История компании", "Наши проекты"],
     trailing: { label: "Партнерство", href: "/about" },
   },

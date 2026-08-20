@@ -34,6 +34,11 @@ const PNG = { quality: 90, compressionLevel: 9, palette: true };
 // kind:"fixed"  -> one derivative, longest side fits `box`
 // kind:"responsive" -> one derivative per width in `widths` (srcset)
 const products = [
+  // Catalog hero lineup — pre-trimmed packs (no transparent padding) so they
+  // line up on a shared baseline. See `catalogHeroes` in constants/products.js.
+  "hero-rojok", "hero-bombey", "hero-eskimo", "hero-vesovoe",
+  "hero-sirok1", "hero-sirok2", "hero-sirok3", "hero-sirok4",
+
   "Kreasy", "Kreasy2", "Kreasy4", "Kreasy5", "Kreasy6", "Kreasy7",
   "1", "2", "3", "rojki",
   "Bombey1", "Bombey2", "Bombey3", "Bombey4", "Bombey5",

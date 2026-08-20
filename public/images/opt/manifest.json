@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 246170214,
-  "totalWebp": 2153706,
-  "totalFallback": 4209756,
+  "totalOrig": 248624932,
+  "totalWebp": 2443138,
+  "totalFallback": 4956619,
   "images": [
     {
       "file": "choco.png",
@@ -445,12 +445,76 @@
       "widths": "1350"
     },
     {
+      "file": "hero-bombey.png",
+      "original": 387174,
+      "webp": 58986,
+      "fallback": 116407,
+      "from": "707x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-sirok2.png",
+      "original": 349257,
+      "webp": 36876,
+      "fallback": 104962,
+      "from": "718x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-sirok1.png",
+      "original": 339664,
+      "webp": 36470,
+      "fallback": 104695,
+      "from": "718x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-sirok4.png",
+      "original": 309548,
+      "webp": 34024,
+      "fallback": 95999,
+      "from": "717x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-vesovoe.png",
+      "original": 292001,
+      "webp": 31598,
+      "fallback": 94423,
+      "from": "588x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-sirok3.png",
+      "original": 289351,
+      "webp": 32488,
+      "fallback": 82935,
+      "from": "718x1440",
+      "widths": "720"
+    },
+    {
+      "file": "hero-rojok.png",
+      "original": 254306,
+      "webp": 37966,
+      "fallback": 80753,
+      "from": "612x1440",
+      "widths": "720"
+    },
+    {
       "file": "krizymaxabout.jpg",
       "original": 236594,
       "webp": 202870,
       "fallback": 242666,
       "from": "853x1280",
       "widths": "853,600"
+    },
+    {
+      "file": "hero-eskimo.png",
+      "original": 233417,
+      "webp": 21024,
+      "fallback": 66689,
+      "from": "391x1440",
+      "widths": "720"
     },
     {
       "file": "abouthed.jpg",

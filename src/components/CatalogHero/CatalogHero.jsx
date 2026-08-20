@@ -15,16 +15,17 @@ const DRIPS = [
 
 /**
  * Above-the-fold intro for the catalog pages: the first thing a visitor sees
- * after opening "Продукция". Copy + flavours come from `catalogHeroes`
+ * after opening "Продукция". Copy + packs come from `catalogHeroes`
  * (src/constants/products.js) — edit the content there, not here.
+ *
+ * `hero.images` renders as a bottom-aligned lineup so the packs read as one
+ * product family; each entry's `width` is its share of the visual column.
  *
  * `download` is the matching PDF from `catalogDownloads` (optional).
  * `onExplore` scrolls the page down to the product list.
  */
 const CatalogHero = ({ hero, download, onExplore }) => {
   if (!hero) return null;
-
-  const [main, ...extras] = hero.images;
 
   return (
     <section className="catalog-hero">
@@ -80,24 +81,17 @@ const CatalogHero = ({ hero, download, onExplore }) => {
 
           <div className="catalog-hero__visual" data-aos="zoom-in">
             <span className="catalog-hero__visual__glow" aria-hidden="true" />
-            <span className="catalog-hero__visual__ring" aria-hidden="true" />
 
-            <figure
-              className="catalog-hero__visual__main"
-              style={main.width ? { width: main.width } : undefined}
-            >
-              <OptImage src={main.src} alt={main.alt} eager priority />
-            </figure>
-
-            {extras.map((image, idx) => (
-              <figure
-                key={image.src}
-                className={`catalog-hero__visual__side catalog-hero__visual__side--${idx + 1}`}
-                style={image.width ? { width: image.width } : undefined}
-              >
-                <OptImage src={image.src} alt={image.alt} eager />
-              </figure>
-            ))}
+            <ul className="catalog-hero__lineup">
+              {hero.images.map((image, idx) => (
+                <li
+                  key={image.src}
+                  style={{ "--w": image.width, "--z": String(idx + 1) }}
+                >
+                  <OptImage src={image.src} alt={image.alt} eager priority={idx === 0} />
+                </li>
+              ))}
+            </ul>
 
             {/* <span className="catalog-hero__sticker">{hero.sticker}</span> */}
           </div>

@@ -137,27 +137,36 @@ export const catalogHeroes = {
     //   { emoji: "🍯", label: "Карамель" },
     // ],
     stats: [
-      { value: "30+", label: "вкусов в линейке" },
-      { value: "20", label: "лет на рынке" },
+      { value: "60+", label: "видов продукции" },
+      { value: "20+", label: "лет на рынке" },
       { value: "100%", label: "натуральное молоко" },
     ],
     cta: "Смотреть ассортимент",
-    // First image is the centrepiece, the rest float around it.
+    // One product-family shot: the packs stand side by side on a shared
+    // baseline. `width` is each pack's share of the visual column; its height
+    // follows from the artwork, so use the pre-trimmed /images/hero-*.png
+    // sources (no transparent padding) or they will not line up.
+    // Keep the widths summing to ~115-120% — the lineup overlaps by 5% a seam.
     images: [
       {
-        src: "/images/rojki.png",
+        src: "/images/hero-rojok.png",
         alt: "Вафельный рожок «Сытый Дом» с бельгийским шоколадом",
-        width: "min(72%, 330px)",
+        width: "30%",
       },
       {
-        src: "/images/Kreasy.png",
-        alt: "Крези Макс лесные ягоды",
-        width: "min(58%, 260px)",
+        src: "/images/hero-bombey.png",
+        alt: "Эскимо «Бомбей» XXL с шоколадным печеньем",
+        width: "34%",
       },
       {
-        src: "/images/Bombey1.png",
-        alt: "БОМБЕЙ с варёной сгущёнкой в вафельной крошке",
-        width: "min(42%, 180px)",
+        src: "/images/hero-eskimo.png",
+        alt: "Эскимо «Прага» в мягкой шоколадной глазури",
+        width: "19%",
+      },
+      {
+        src: "/images/hero-vesovoe.png",
+        alt: "Мороженое пломбир «Сытый Дом» с ванильным вкусом, 1 кг",
+        width: "27%",
       },
     ],
   },
@@ -181,29 +190,33 @@ export const catalogHeroes = {
       { value: "100%", label: "натуральный творог" },
     ],
     cta: "Смотреть ассортимент",
-    // First image is the centrepiece, the rest float around it.
+    // Same product-family lineup as the ice-cream hero — see the note there.
     images: [
-      
       {
-        src: "/images/Сыробушки.png",
-        alt: "Творожные палочки в апельсиновой глазури",
-        width: "min(100%, 440px)",
-      },
-{
-        src: "/images/SirokM2.png",
-        alt: "Сырок творожный кофейный в молочной глазури",
-        width: "min(62%, 230px)",
-      },
-      {
-        src: "/images/SirokM.png",
+        src: "/images/hero-sirok1.png",
         alt: "Сырок творожный пломбир в молочной глазури",
-        width: "min(38%, 165px)",
+        width: "29%",
+      },
+      {
+        src: "/images/hero-sirok3.png",
+        alt: "Сырок творожный пломбир в тёмной глазури",
+        width: "31%",
+      },
+      {
+        src: "/images/hero-sirok2.png",
+        alt: "Сырок творожный кофейный в молочной глазури",
+        width: "28%",
+      },
+      {
+        src: "/images/hero-sirok4.png",
+        alt: "Сырок творожный пломбир в карамельной глазури",
+        width: "30%",
       },
     ],
   },
 };
 
 export const catalogDownloads = [
-  { href: "/images/ahmedov_katalog.pdf", file: "ahmedov_katalog.pdf", label: "Каталог Мороженого" },
+  { href: "/images/ahmedov_katalog.pdf", file: "ahmedov_katalog.pdf", label: "Каталог мороженого" },
   { href: "/images/newcatalog.pdf", file: "newcatalog.pdf", label: "Новый каталог" },
 ];
