@@ -4,31 +4,36 @@
 
   .modallink {
     position: absolute;
-    bottom: 100px;
-    left: 50px;
+    bottom: 36px;
+    left: 40px;
     z-index: 3;
-    height: 100px;
-    width: 200px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #6C9C6C, #B1A688);
-    display: flex;
+    padding: 10px 24px;
+    border-radius: 30px;
+    background: rgba(108, 156, 108, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .modallink:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  }
-
-  .modallink p {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
     text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      transform: translateY(-3px) scale(1.02);
+      background: rgba(108, 156, 108, 1);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+    }
+
+    p {
+      margin: 0;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
   }
 
   // react-slick fade leaves both slides stacked; this keeps the
@@ -129,15 +134,29 @@
         margin-top: 80px;
       }
       a {
-        display: flex;
+        display: inline-flex;
         align-items: center;
-        justify-content: start;
-        height: 24px;
-        font-size: 24px;
-        color: purple;
-        margin-top: 20px;
-        outline: none;
-        gap: 20px;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #393582;
+        margin-top: 30px;
+        text-decoration: none;
+        transition: color 0.25s ease;
+
+        &:hover {
+          color: darken(#393582, 12%);
+
+          svg {
+            transform: translateX(4px);
+          }
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+          transition: transform 0.25s ease;
+        }
       }
     }
     &__right {
@@ -364,7 +383,19 @@
 // Home.jsx swaps to the portrait `mobile` banner at <=500px (MOBILE_BREAKPOINT);
 // the slide box has to flip with it or the tall file gets cropped again.
 @media (max-width: 500px) {
-  .slider-container .sliders-item {
-    aspect-ratio: 9 / 16;
+  .slider-container {
+    .sliders-item {
+      aspect-ratio: 9 / 16;
+    }
+
+    .modallink {
+      bottom: 20px;
+      left: 20px;
+      padding: 8px 18px;
+
+      p {
+        font-size: 13px;
+      }
+    }
   }
 }

@@ -256,7 +256,7 @@ $muted: #6e6e6e;
   .history-title {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     gap: 12px;
 
@@ -270,30 +270,41 @@ $muted: #6e6e6e;
     &__link {
       display: inline-flex;
       align-items: center;
-      font-size: clamp(15px, 1.2vw, 18px);
-      font-weight: 600;
+      gap: 6px;
+      padding: 6px 14px;
+      font-size: 13.5px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
       color: $brand;
+      background-color: rgba($brand, 0.05);
+      border: 1px solid rgba($brand, 0.18);
+      border-radius: 20px;
+      text-decoration: none;
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
       &:hover {
-        color: darken($brand, 10%);
+        background-color: $brand;
+        color: #ffffff;
+        border-color: $brand;
+        box-shadow: 0 4px 12px rgba(57, 53, 130, 0.2);
 
         i {
-          transform: translateX(3px);
+          transform: translateX(4px);
+          color: #ffffff;
         }
       }
 
       &:focus-visible {
-        outline: 3px solid $brand;
-        outline-offset: 4px;
-        border-radius: 6px;
+        outline: 2px solid $brand;
+        outline-offset: 2px;
+        border-radius: 20px;
       }
 
       i {
-        margin-left: 6px;
-        font-size: 1.3em;
-        transition: transform 0.25s ease;
+        font-size: 1.1rem;
+        line-height: 1;
+        transition: transform 0.25s ease, color 0.25s ease;
       }
     }
   }
