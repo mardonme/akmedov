@@ -135,3 +135,35 @@
     }
   }
 }
+/* Bridges the brand catalogue to the order form: this page shows what exists,
+   /dostavka is where it gets ordered. */
+.catalog-container__delivery {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  background: #f9532d;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: #e2431f;
+    color: #fff;
+  }
+
+  i {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog-container__delivery {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+  }
+}

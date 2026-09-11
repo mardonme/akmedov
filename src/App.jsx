@@ -15,6 +15,7 @@ const WhereToBuy = lazy(() => import("./pages/WhereToBuy/WhereToBuy"));
 const About = lazy(() => import("./pages/About/About"));
 const Catalog = lazy(() => import("./pages/Catalog/Catalog"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
+const Delivery = lazy(() => import("./pages/Delivery/Delivery"));
 const routes = [
   { path: "/", element: <Home /> },
   { path: "/made", element: <Made /> },
@@ -24,7 +25,8 @@ const routes = [
   { path: "/catalog/icecream", element: <Catalog category="icecream" /> },
   { path: "/catalog/syroki", element: <Catalog category="syroki" /> },
   { path: "/catalog", element: <Navigate to="/catalog/icecream" replace /> },
-  { path: "/contact", element: <Contact /> }
+  { path: "/contact", element: <Contact /> },
+  { path: "/dostavka", element: <Delivery /> }
 ];
 
 const App = () => {

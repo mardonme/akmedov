@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import ProductSection from "../../components/ProductSection/ProductSection";
 import CatalogHero from "../../components/CatalogHero/CatalogHero";
 import {
@@ -57,6 +58,11 @@ const Catalog = ({ category }) => {
             </a>
           ))}
         </h1>
+        <Link to="/dostavka" className="catalog-container__delivery">
+          <i className="bx bx-cycling" />
+          Заказать с доставкой на дом
+        </Link>
+
         {filteredSections.map((section) => (
           <ProductSection
             key={section.title}

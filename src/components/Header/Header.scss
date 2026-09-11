@@ -63,6 +63,27 @@
          border-bottom: 2px solid var(--pre-color);
         }
 
+        /* Delivery is the site's one commercial action, so it reads as a
+           button rather than as another nav link. */
+        .nav-accent {
+            padding: 9px 18px;
+            border-radius: 999px;
+            background: #f9532d;
+            color: #fff;
+
+            &:hover {
+                background: #e2431f;
+                color: #fff;
+            }
+
+            &.active {
+                padding-bottom: 9px;
+                border-bottom: none;
+                background: #e2431f;
+                color: #fff;
+            }
+        }
+
         .nav-dropdown {
             position: relative;
 

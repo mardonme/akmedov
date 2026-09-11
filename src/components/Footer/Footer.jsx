@@ -74,6 +74,10 @@ const Footer = () => {
               Заполните форму, и наш менеджер свяжется с вами.
             </p>
             <div className="footer-feedback__row">
+              <a href="/dostavka" className="contact-link">
+                Заказать доставку
+                <i className="bx bx-right-arrow-alt" />
+              </a>
               <a href="/contact" className="contact-link">
                 Связаться с нами
                 <i className="bx bx-right-arrow-alt" />

@@ -6,6 +6,7 @@ import OptImage from "../OptImage/OptImage";
 import "./Header.scss";
 
 const primaryNav = [
+  { to: "/dostavka", label: "Доставка", accent: true },
   { to: "/about", label: "О компании" },
   { to: "/made", label: "Отдел производства" },
   {
@@ -21,6 +22,7 @@ const primaryNav = [
 ];
 
 const mobileNav = [
+  { to: "/dostavka", label: "Доставка" },
   { to: "/about", label: "О компании" },
   { to: "/catalog/icecream", label: "Мороженое" },
   { to: "/catalog/syroki", label: "Творожные сырки" },
@@ -32,7 +34,7 @@ const bottomNav = [
   { to: "/", label: "Домой", icon: "bx-home-smile" },
   { to: "/about", label: "О компании", icon: "bx-package" },
   { to: "/catalog/icecream", label: "Мороженое", icon: "bx-basket" },
-  { to: "/catalog/syroki", label: "Сырки", icon: "bx-heart" },
+  { to: "/dostavka", label: "Доставка", icon: "bx-cycling" },
   { to: "/contact", label: "Контакты", icon: "bx-universal-access" },
 ];
 
@@ -102,7 +104,11 @@ const Header = () => {
               );
             }
             return (
-              <NavLink key={item.to} to={item.to}>
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={item.accent ? "nav-accent" : undefined}
+              >
                 {item.label}
               </NavLink>
             );

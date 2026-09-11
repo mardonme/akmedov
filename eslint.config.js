@@ -7,6 +7,11 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
+    // Vercel serverless functions — Node runtime, not the browser.
+    files: ['api/**/*.js'],
+    languageOptions: { globals: globals.node },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
