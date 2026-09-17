@@ -3,7 +3,7 @@ export const contactInfo = {
   phones: {
     regions: { label: "+998 90 043-04-83", href: "tel:+998900430483" },
     header: { label: "+998 90 813-30-00", href: "tel:+998908133000" },
-    order: "+998900514841",
+    order: "+998988880838",
   },
   socials: {
     instagram: "https://www.instagram.com/akhmedovuzbekistan",
