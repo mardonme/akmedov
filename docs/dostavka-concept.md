@@ -107,8 +107,8 @@ Mavjud `products.js`, `catalogSections`, `/catalog/*` — **tegilmaydi**.
 │  Привезём за 1–2 часа. Оплата наличными.     │
 │                                              │
 │  ┌── [1] Куда привезти ──────────────────┐   │
-│  │  Область / город   [Сырдарья      ▾]  │   │
-│  │  Район             [—             ▾]  │   │
+│  │  Город / область   [Ташкент       ▾]  │   │
+│  │  Район           * [—             ▾]  │   │
 │  │  Улица *           [_______________]  │   │
 │  │  Дом *             [____]             │   │
 │  │  Квартира          [____]             │   │
@@ -228,7 +228,7 @@ sezilarli soddalashtiradi.
 🍦 НОВЫЙ ЗАКАЗ  AKH-260911-0042
 
 👤 Мадина  ·  +998 90 123-45-67
-📍 Сырдарья, Достлик, ул. Достлик 20, кв. 5
+📍 Ташкент, Чиланзарский район, ул. Бунёдкор 20, кв. 5
    ориентир: напротив школы №3
 🗺 https://yandex.uz/maps/?pt=68.671,41.038&z=17
 🕐 Сегодня, 16:00–18:00
@@ -377,6 +377,35 @@ buzuq koordinata, 5000 belgili matn), slot mantiqi UTC serverda, brauzerda
 to'liq oqim (validatsiya → yuborish → muvaffaqiyat → profil eslab qolinishi),
 mobil ko'rinish, soat 10:00/17:00/22:00 da slot holati.
 
-**Hali kerak (10-bo'lim):** haqiqiy hududlar va narxlar, ish vaqti, Yandex Maps
-kaliti, Telegram token va `chat_id`. Ularsiz sayt ishlaydi, lekin namunaviy
-Sirdaryo/Guliston qiymatlari bilan va xaritasiz.
+**Hali kerak (10-bo'lim):** haqiqiy narxlar, ish vaqti, Yandex Maps kaliti,
+Telegram token va `chat_id`. Ularsiz sayt ishlaydi, lekin namunaviy narx va
+minimal summa qiymatlari bilan va xaritasiz.
+
+---
+
+## 17. Yetkazib berish hududi (2026-09-17)
+
+Kompaniya qarori: yetkazib berish **faqat Toshkent shahri va Toshkent viloyati**
+bo'yicha. Avvalgi namunaviy Sirdaryo/Guliston zonalari
+`src/constants/delivery.js` dan olib tashlandi va o'rniga ikkita zona qo'yildi:
+
+| Zona | `districts` | Slotlar | Namunaviy narx / minimal summa |
+|---|---|---|---|
+| Ташкент (город) | 12 ta shahar tumani | 4 tasi ham | 25 000 / 100 000 so'm |
+| Ташкентская область | 7 ta shahar + 13 ta tuman | 14–16, 16–18, 18–20 | 45 000 / 200 000 so'm |
+
+Narx, minimal summa va `leadTimeMin` **hamon namunaviy** — kompaniyadan haqiqiy
+raqamlar kutilmoqda (10-bo'lim, 1-qator hududlar bo'yicha yopildi).
+
+Shu o'zgarish bilan birga:
+
+- **`Район` maydoni endi majburiy.** Viloyat zonasi butun bir viloyatni qamraydi,
+  shuning uchun tumansiz manzil kuryer uchun yaroqsiz. Tekshiruv `validateOrder`
+  da — ro'yxatga *a'zolik* bo'yicha, ya'ni server mijoz yuborgan ixtiyoriy
+  satrni qabul qilmaydi.
+- Zonaga `label` (dropdown matni), `districtLabel` (shahar uchun «Район»,
+  viloyat uchun «Город / район») va `mapZoom` maydonlari qo'shildi; eski
+  `region` maydoni `label` bilan almashtirildi.
+- `localStorage` dagi eski profil zonasi/tumani endi konfiguratsiyada
+  topilmasa, forma ochilganda tozalanadi — aks holda select bo'sh ko'rinib,
+  forma esa shahar tanlangan deb hisoblardi.

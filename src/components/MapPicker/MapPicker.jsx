@@ -79,7 +79,7 @@ const MapPicker = ({ zone, value, onPick, onClose }) => {
         const start = point ? [point.lat, point.lng] : zone?.mapCenter ?? [41.3111, 69.2797];
         const map = new ymaps.Map(containerRef.current, {
           center: start,
-          zoom: point ? 17 : 13,
+          zoom: point ? 17 : zone?.mapZoom ?? 13,
           controls: ["zoomControl", "geolocationControl", "searchControl"],
         });
         mapRef.current = map;

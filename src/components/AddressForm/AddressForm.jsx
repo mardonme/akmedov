@@ -14,36 +14,41 @@ const AddressForm = ({ values, errors, onChange, onOpenMap, mapEnabled, zone }) 
     <div className="address-form">
       <div className="address-form__grid">
         <FormField
-          label="Город доставки"
+          label="Город / область"
           name="zoneId"
           as="select"
           required
           value={values.zoneId}
           error={errors.zoneId}
-          // Changing the city invalidates the district list and can drop the
+          // Changing the zone invalidates the district list and can drop the
           // chosen slot, so both are reset here rather than left stale.
           onChange={(event) =>
             onChange({ zoneId: event.target.value, district: "", slotId: "" })
           }
         >
-          <option value="">Выберите город</option>
+          <option value="">Выберите город или область</option>
           {deliveryZones.map((item) => (
             <option key={item.id} value={item.id}>
-              {item.city} ({item.region})
+              {item.label}
             </option>
           ))}
         </FormField>
 
         <FormField
-          label="Район"
+          // The region zone covers a whole province, so its second dropdown
+          // carries the town — hence the label comes from the zone.
+          label={zone?.districtLabel ?? "Район"}
           name="district"
           as="select"
+          required
           value={values.district}
           error={errors.district}
           disabled={!zone}
           onChange={set("district")}
         >
-          <option value="">{zone ? "Не указан" : "Сначала выберите город"}</option>
+          <option value="">
+            {zone ? "Выберите из списка" : "Сначала выберите город или область"}
+          </option>
           {(zone?.districts ?? []).map((district) => (
             <option key={district} value={district}>
               {district}
@@ -55,7 +60,7 @@ const AddressForm = ({ values, errors, onChange, onOpenMap, mapEnabled, zone }) 
           label="Улица"
           name="street"
           required
-          placeholder="Достлик"
+          placeholder="Бунёдкор"
           maxLength={120}
           value={values.street}
           error={errors.street}

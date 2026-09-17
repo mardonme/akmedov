@@ -70,7 +70,16 @@ const pickProfile = (values) =>
 const Delivery = () => {
   const [values, setValues] = useState(() => {
     const saved = loadProfile();
-    return saved ? { ...emptyValues, ...pickProfile({ ...emptyValues, ...saved }) } : emptyValues;
+    if (!saved) return emptyValues;
+    const restored = { ...emptyValues, ...pickProfile({ ...emptyValues, ...saved }) };
+    // A returning customer can carry a zone or a district that has since left
+    // the config. Left alone, the select would show nothing while the form
+    // still believed a city was chosen.
+    const savedZone = getZone(restored.zoneId);
+    if (!savedZone) return { ...restored, zoneId: emptyValues.zoneId, district: "" };
+    if (restored.district && !savedZone.districts.includes(restored.district))
+      return { ...restored, district: "" };
+    return restored;
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");

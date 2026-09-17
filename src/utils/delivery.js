@@ -165,7 +165,13 @@ export const validateOrder = (values, now = tashkentNow()) => {
   const errors = {};
   const zone = getZone(values.zoneId);
 
-  if (!zone) errors.zoneId = "Выберите город доставки";
+  if (!zone) errors.zoneId = "Выберите город или область";
+  // The region zone spans a whole province, so without this the courier gets
+  // a street and a house number with no town to drive to. Membership, not just
+  // presence: it comes from a closed dropdown, and the server must not take
+  // whatever string a client felt like posting.
+  else if (zone.districts?.length && !zone.districts.includes(String(values.district ?? "").trim()))
+    errors.district = `Выберите ${(zone.districtLabel ?? "район").toLowerCase()}`;
   if (!String(values.name ?? "").trim() || values.name.trim().length < 2)
     errors.name = "Укажите имя";
   if (!isValidPhone(values.phone)) errors.phone = "Укажите номер в формате +998 90 123-45-67";

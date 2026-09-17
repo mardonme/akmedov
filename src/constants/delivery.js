@@ -1,10 +1,11 @@
 /**
  * Delivery configuration for the /dostavka order form.
  *
- * PLACEHOLDER VALUES. The real zones, districts, fees, minimum order and
- * cut-off times still have to come from the company (docs/dostavka-concept.md
- * §10). When they arrive only this file changes — no component hard-codes a
- * zone, a slot or a fee anywhere else.
+ * The served area is Tashkent city and Tashkent region — nothing else. Fees,
+ * minimum order and cut-off times are still PLACEHOLDER VALUES pending real
+ * numbers from the company (docs/dostavka-concept.md §10). When they arrive
+ * only this file changes — no component hard-codes a zone, a slot or a fee
+ * anywhere else.
  */
 
 /**
@@ -21,33 +22,76 @@ export const timeSlots = [
 
 /**
  * Zones we deliver to. `slots` lists the ids from `timeSlots` available in that
- * zone, so a far district can offer fewer windows than the city centre.
+ * zone, so the region can offer fewer windows than the city.
  *
- * `mapCenter` is only where the map opens before the customer drops a pin —
- * approximate city centres, worth confirming once the map key is in place.
+ * `label` is what the customer picks from; `city` is the prefix of the address
+ * line in the Telegram message. `districts` is the second dropdown — for the
+ * city those are its districts, for the region its towns and districts, which
+ * is why `districtLabel` differs between the two.
+ *
+ * `mapCenter` / `mapZoom` are only where the map opens before the customer
+ * drops a pin.
  */
 export const deliveryZones = [
   {
-    id: "sirdaryo",
-    region: "Сырдарьинская область",
-    city: "Сырдарья",
-    districts: ["Центр", "Достлик", "Рахимов", "Янгиобод"],
-    fee: 15000,
-    minOrder: 50000,
+    id: "tashkent",
+    label: "Ташкент (город)",
+    city: "Ташкент",
+    districtLabel: "Район",
+    districts: [
+      "Алмазарский район",
+      "Бектемирский район",
+      "Мирабадский район",
+      "Мирзо-Улугбекский район",
+      "Сергелийский район",
+      "Учтепинский район",
+      "Чиланзарский район",
+      "Шайхантахурский район",
+      "Юнусабадский район",
+      "Яккасарайский район",
+      "Янгихаётский район",
+      "Яшнабадский район",
+    ],
+    fee: 25000,
+    minOrder: 100000,
     leadTimeMin: 90,
     slots: ["12-14", "14-16", "16-18", "18-20"],
-    mapCenter: [40.8408, 68.6608],
+    mapCenter: [41.3111, 69.2797],
+    mapZoom: 11,
   },
   {
-    id: "gulistan",
-    region: "Сырдарьинская область",
-    city: "Гулистан",
-    districts: ["Центр", "Мустакиллик", "Навруз"],
-    fee: 20000,
-    minOrder: 70000,
-    leadTimeMin: 120,
+    id: "tashkent-region",
+    label: "Ташкентская область",
+    city: "Ташкентская область",
+    districtLabel: "Город / район",
+    districts: [
+      "Нурафшан",
+      "Чирчик",
+      "Ангрен",
+      "Алмалык",
+      "Ахангаран",
+      "Бекабад",
+      "Янгиюль",
+      "Аккурганский район",
+      "Бостанлыкский район",
+      "Букинский район",
+      "Зангиатинский район",
+      "Кибрайский район",
+      "Куйичирчикский район",
+      "Паркентский район",
+      "Пскентский район",
+      "Ташкентский район",
+      "Уртачирчикский район",
+      "Чиназский район",
+      "Юкоричирчикский район",
+      "Янгиюльский район",
+    ],
+    fee: 45000,
+    minOrder: 200000,
+    leadTimeMin: 180,
     slots: ["14-16", "16-18", "18-20"],
-    mapCenter: [40.4897, 68.7842],
+    mapCenter: [41.1, 69.5],
+    mapZoom: 9,
   },
 ];
 
