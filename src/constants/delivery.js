@@ -99,3 +99,52 @@ export const deliveryZones = [
 export const workingHours = { fromMin: 9 * 60, toMin: 20 * 60 };
 
 export const paymentNote = "Наличными курьеру";
+
+/**
+ * The /dostavka page itself: the same announcement in Uzbek and Russian.
+ * Orders are taken in the admin's Telegram, not through a form.
+ */
+export const deliveryAnnouncement = {
+  uz: {
+    lang: "O'zbekcha",
+    title: "Uyga yetkazib berish xizmati",
+    intro:
+      "Endi sevimli muzqaymoqlaringizni uydan chiqmasdan buyurtma qilishingiz mumkin!",
+    hours: "Buyurtmalar 9:00 dan 16:00 gacha qabul qilinadi.",
+    deliveryTitle: "Yetkazib berish:",
+    delivery: [
+      {
+        place: "Toshkent shahri",
+        text: "9:00 dan 16:00 gacha berilgan buyurtmalar 21:00 gacha yetkazib beriladi.",
+      },
+      {
+        place: "Toshkent viloyati",
+        text: "berilgan buyurtmalar ertasi kuni kun davomida yetkazib beriladi.",
+      },
+    ],
+    zoneTitle: "Yetkazib berish hududi:",
+    zone: "Toshkent shahri va Toshkent viloyati.",
+    outro:
+      "Buyurtma bering — biz esa sevimli muzqaymoqlaringizni eshigingizgacha yetkazamiz!",
+  },
+  ru: {
+    lang: "Русский",
+    title: "Доставка на дом",
+    intro: "Теперь вы можете заказать любимое мороженое, не выходя из дома!",
+    hours: "Заказы принимаются с 9:00 до 16:00.",
+    deliveryTitle: "Доставка:",
+    delivery: [
+      {
+        place: "По Ташкенту",
+        text: "заказы, оформленные с 9:00 до 16:00, доставляются до 21:00.",
+      },
+      {
+        place: "По Ташкентской области",
+        text: "заказы доставляются на следующий день в течение дня.",
+      },
+    ],
+    zoneTitle: "Зона доставки:",
+    zone: "г. Ташкент и Ташкентская область.",
+    outro: "Оформляйте заказ — мы доставим ваше любимое мороженое прямо до двери!",
+  },
+};

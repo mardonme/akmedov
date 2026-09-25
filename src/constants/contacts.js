@@ -8,6 +8,8 @@ export const contactInfo = {
   socials: {
     instagram: "https://www.instagram.com/akhmedovuzbekistan",
     telegram: "https://t.me/akhmedov_uzbekistan",
+    // Personal account of the admin who takes delivery orders.
+    admin: "https://t.me/akhmedov_groupp",
   },
 };
 

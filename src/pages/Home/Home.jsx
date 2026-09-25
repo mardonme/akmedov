@@ -8,12 +8,6 @@ import { heroSliderSettings } from "../../constants/sliders";
 import OptImage from "../../components/OptImage/OptImage";
 import "./Home.scss";
 
-// Below this width the portrait banner is served. Home.scss flips the slide
-// box to 9:16 at the same width — the two must stay in sync, which is why the
-// swap is a <source> media query and not a JS width check: a JS check is read
-// once at mount, so a resize would leave a landscape banner in a 9:16 box.
-const MOBILE_BREAKPOINT = 500;
-
 const Home = () => {
   return (
     <>
@@ -21,28 +15,22 @@ const Home = () => {
         <div className="slider-container">
           <Slider {...heroSliderSettings}>
             {banners.map((banner, idx) => (
-              // Banner images load straight from /images/ (not /images/opt/),
-              // so swapping a file in public/images/ updates the hero directly.
-              <div key={idx} className="sliders-item">
-                <picture>
-                  <source
-                    media={`(max-width: ${MOBILE_BREAKPOINT}px)`}
-                    srcSet={banner.mobile}
-                  />
-                  <img
-                    src={banner.desktop}
-                    alt={`Banner ${idx + 1}`}
-                    loading={idx === 0 ? "eager" : "lazy"}
-                    fetchPriority={idx === 0 ? "high" : undefined}
-                    decoding="async"
-                  />
-                </picture>
-              </div>
+              // Every banner has its own "Подробнее" drawn in, so the whole
+              // slide is the link. The blurred copy behind fills whatever the
+              // banner's shape leaves empty in the fixed-ratio box.
+              <Link key={banner.src} to="/catalog" className="sliders-item">
+                <img className="sliders-item__fill" src={banner.src} alt="" aria-hidden="true" />
+                <img
+                  className="sliders-item__banner"
+                  src={banner.src}
+                  alt={banner.alt}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  fetchPriority={idx === 0 ? "high" : undefined}
+                  decoding="async"
+                />
+              </Link>
             ))}
           </Slider>
-          <Link to="/catalog" className="modallink">
-            <p>Подробнее</p>
-          </Link>
         </div>
 
         <div className="container first-container">

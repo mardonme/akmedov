@@ -45,35 +45,17 @@ Single-page React 18 + Vite app for an ice cream brand marketing site (deployed 
 
 ### Delivery (`/dostavka`)
 
-An order-intake form, deliberately **not** a shop: no cart, no product cards, no
-search, no prices. The customer gives an address, a delivery window and a
-free-text list of what to bring; the order lands in an admin Telegram group and
-an operator calls back to confirm the total. Payment is cash on delivery.
-Rationale and trade-offs: [docs/dostavka-concept.md](docs/dostavka-concept.md).
+A static announcement page (since 2026-09-25): the same text in Uzbek and
+Russian side by side, a button to the admin's Telegram
+(`contactInfo.socials.admin`) and one to the channel, plus the catalog links.
+Orders are taken by hand in Telegram. Text lives in `deliveryAnnouncement` in
+[src/constants/delivery.js](src/constants/delivery.js).
 
-- **Config** — [src/constants/delivery.js](src/constants/delivery.js): zones,
-  districts, fees, minimum order, lead time and time slots. These are still
-  placeholder values pending real numbers from the company. Nothing hard-codes a
-  zone or a slot anywhere else, so this is the only file to edit.
-- **Logic** — [src/utils/delivery.js](src/utils/delivery.js): phone masking,
-  slot availability, the localStorage profile and `validateOrder`. It is
-  React-free and imported by the serverless function too, so the same rules run
-  on both sides; that is also why its imports carry explicit `.js` extensions.
-- **Timezone** — never use the host clock for slot logic. Vercel runs in UTC and
-  a customer's device can be set to anything, so everything goes through
-  `tashkentNow()`.
-- **Endpoint** — [api/order.js](api/order.js) re-validates, formats an HTML
-  message and posts to the Telegram Bot API. Env: `TELEGRAM_BOT_TOKEN`,
-  `TELEGRAM_CHAT_ID` — **no `VITE_` prefix**, or the token ships to the browser.
-- **`vercel.json` rewrite** — the SPA catch-all is `"/((?!api/).*)"`. Restoring a
-  plain `"/(.*)"` would swallow `/api/order` and silently break every order.
-- **Local dev** — Vite knows nothing about `/api`, so
-  [vite.config.js](vite.config.js) mounts the handler as dev middleware. Without
-  Telegram credentials it runs dry: the message is printed to the dev-server
-  terminal instead of being sent.
-- **Map** — `VITE_YANDEX_MAPS_KEY` is optional. Without it the "указать на карте"
-  button is hidden and the form works by hand; `MapPicker` is lazy-loaded so the
-  Yandex script costs nothing to everyone else.
-- **Fallback** — if `/api/order` or Telegram is down the order is re-sent through
-  the existing `/message/submit` contact endpoint and the customer is shown the
-  phone number. An order should never disappear silently.
+The earlier order form was replaced because orders never reached anyone in
+production. Its code is still in the repo but the page no longer uses it:
+`AddressForm`, `TimeSlotPicker`, `MapPicker`, `FormField`,
+[src/utils/delivery.js](src/utils/delivery.js), [src/api/order.js](src/api/order.js)
+and the serverless [api/order.js](api/order.js) (env `TELEGRAM_BOT_TOKEN`,
+`TELEGRAM_CHAT_ID`, no `VITE_` prefix). See
+[docs/dostavka-concept.md](docs/dostavka-concept.md). Keep the `vercel.json`
+catch-all as `"/((?!api/).*)"` so `/api/*` still reaches its functions.
