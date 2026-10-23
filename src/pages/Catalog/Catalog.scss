@@ -128,6 +128,12 @@
             justify-content: center;
             &__item{
               width: 50%;
+              // Half-width columns: keep wide packs (Pankie, square shots)
+              // inside their own column instead of spilling over the next one.
+              img {
+                max-width: 100%;
+                object-fit: contain;
+              }
             }
           }
         }

@@ -19,6 +19,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { banners, BANNER_WIDTHS } from "../src/constants/banners.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -54,8 +55,16 @@ const products = [
 const SPEC = [
   ...products,
 
-  // NOTE: the hero banner/mobile images are intentionally NOT optimized here —
-  // they are served straight from /images/ so they can be swapped by file.
+  // Home hero slider — full-bleed (sizes="100vw"). The list comes from
+  // constants/banners.js so swapping a banner never needs an edit here.
+  // Banners carry drawn-in text, so WebP gets a higher quality than products.
+  ...banners.map(({ src }) => {
+    const file = src.replace(/^\/images\//, "");
+    return {
+      name: file.replace(/\.[^.]+$/, ""), ext: file.split(".").pop(), outExt: "jpg", file,
+      kind: "responsive", widths: BANNER_WIDTHS, jpeg: JPEG_HERO, webp: { quality: 85, effort: 6 },
+    };
+  }),
 
   // Home — chocolate hero (below the fold, stacks full-width <1100px)
   { name: "choco", ext: "png", kind: "responsive", widths: [1400, 1024, 640] },

@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 248624932,
-  "totalWebp": 2443138,
-  "totalFallback": 4956619,
+  "totalOrig": 249345169,
+  "totalWebp": 3306014,
+  "totalFallback": 5897340,
   "images": [
     {
       "file": "choco.png",
@@ -445,6 +445,14 @@
       "widths": "1350"
     },
     {
+      "file": "banner9.jpg",
+      "original": 402043,
+      "webp": 489994,
+      "fallback": 526434,
+      "from": "1870x841",
+      "widths": "2400,1600,800"
+    },
+    {
       "file": "hero-bombey.png",
       "original": 387174,
       "webp": 58986,
@@ -467,6 +475,14 @@
       "fallback": 104695,
       "from": "718x1440",
       "widths": "720"
+    },
+    {
+      "file": "banner8.jpg",
+      "original": 318194,
+      "webp": 372882,
+      "fallback": 414287,
+      "from": "1942x809",
+      "widths": "2400,1600,800"
     },
     {
       "file": "hero-sirok4.png",

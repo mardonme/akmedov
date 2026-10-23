@@ -44,6 +44,9 @@ $muted: #6e6e6e;
 
       img {
         width: 85%;
+        // Source is 853px wide: past ~440px it towers over the text and
+        // turns soft on retina screens.
+        max-width: 440px;
         height: auto;
         border-radius: 20px;
       }

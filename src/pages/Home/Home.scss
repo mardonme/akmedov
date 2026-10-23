@@ -79,6 +79,10 @@
     display: flex;
     gap: 80px;
     &__left {
+      // Fixed shares: with content-sized columns the long paragraph squeezed
+      // the product photo down to a thumbnail.
+      flex: 1 1 55%;
+      min-width: 0;
       h1 {
         font-size: 70px;
         font-weight: 700;
@@ -118,6 +122,7 @@
       }
     }
     &__right {
+      flex: 1 1 45%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -190,6 +195,10 @@
     &-container {
       gap: 80px;
       flex-direction: column-reverse;
+      &__left,
+      &__right {
+        flex: none;
+      }
       &__left {
         width: 100%;
         h1 {

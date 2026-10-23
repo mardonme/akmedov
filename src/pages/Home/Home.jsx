@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import Icons from "../../utils/utils";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import PartnerGrid from "../../components/PartnerGrid/PartnerGrid";
-import { banners } from "../../constants/banners";
+import { banners, BANNER_WIDTHS } from "../../constants/banners";
 import { heroSliderSettings } from "../../constants/sliders";
 import OptImage from "../../components/OptImage/OptImage";
 import "./Home.scss";
@@ -19,14 +19,22 @@ const Home = () => {
               // slide is the link. The blurred copy behind fills whatever the
               // banner's shape leaves empty in the fixed-ratio box.
               <Link key={banner.src} to="/catalog" className="sliders-item">
-                <img className="sliders-item__fill" src={banner.src} alt="" aria-hidden="true" />
-                <img
+                <OptImage
+                  className="sliders-item__fill"
+                  src={banner.src}
+                  widths={BANNER_WIDTHS}
+                  sizes="100vw"
+                  aria-hidden="true"
+                  eager={idx === 0}
+                />
+                <OptImage
                   className="sliders-item__banner"
                   src={banner.src}
+                  widths={BANNER_WIDTHS}
+                  sizes="100vw"
                   alt={banner.alt}
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  fetchPriority={idx === 0 ? "high" : undefined}
-                  decoding="async"
+                  eager={idx === 0}
+                  priority={idx === 0}
                 />
               </Link>
             ))}
@@ -51,7 +59,7 @@ const Home = () => {
             <OptImage
               src="/images/choco.png"
               widths={[1400, 1024, 640]}
-              sizes="(max-width: 1100px) 90vw, 600px"
+              sizes="(max-width: 1100px) 90vw, 540px"
               alt="Мороженое Akhmedov"
             />
           </div>

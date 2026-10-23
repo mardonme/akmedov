@@ -33,7 +33,7 @@ const About = () => (
           <OptImage
             src="/images/abouthed.jpg"
             widths={[853, 600]}
-            sizes="(max-width: 1024px) 80vw, 561px"
+            sizes="(max-width: 550px) 80vw, 440px"
             alt="О компании Akhmedov"
             eager
             priority

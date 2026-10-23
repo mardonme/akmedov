@@ -33,8 +33,6 @@ async function main() {
     // Keep the optimized derivatives and anything that isn't a raster original.
     if (entry.isDirectory()) continue; // opt/ and any other folders
     if (!/\.(png|jpe?g)$/i.test(entry.name)) continue; // keep PDFs, etc.
-    // Keep the hero banner/mobile images — they're referenced directly from /images/.
-    if (/^(banner|mobile)\d*\.jpe?g$/i.test(entry.name)) continue;
     const p = path.join(DIST_IMAGES, entry.name);
     freed += (await fs.stat(p)).size;
     await fs.rm(p);

@@ -57,16 +57,17 @@ async function checkRef(ref) {
 }
 
 async function main() {
-  const { catalogSections } = await load("src/constants/products.js");
+  const { catalogSections, catalogHeroes } = await load("src/constants/products.js");
   const { brands } = await load("src/constants/brands.js");
   const { partners } = await load("src/constants/partners.js");
+  const { banners, BANNER_WIDTHS } = await load("src/constants/banners.js");
 
   const refs = [];
   for (const s of catalogSections) for (const g of s.groups) for (const it of g.items) refs.push({ src: it.img });
-  // Hero banner/mobile images are served directly from /images/ (not optimized),
-  // so they're intentionally excluded from the opt/ derivative checks.
+  for (const h of Object.values(catalogHeroes)) for (const img of h.images) refs.push({ src: img.src });
   for (const b of brands) refs.push({ src: b.img });
   for (const p of partners) refs.push({ src: p.img });
+  for (const b of banners) refs.push({ src: b.src, widths: BANNER_WIDTHS });
   refs.push({ src: "/images/choco.png", widths: [1400, 1024, 640] });
   refs.push({ src: "/images/abouthed.jpg", widths: [853, 600] });
   refs.push({ src: "/images/krizymaxabout.jpg", widths: [853, 600] });
