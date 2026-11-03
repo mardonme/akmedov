@@ -4,19 +4,42 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 100;
+    // Above the header (z-index 1000) while the site mounts underneath.
+    z-index: 2000;
     background-color: #4E428E;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    cursor: pointer;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     img {
        height: 200px;
-    //    width: 500px;
+       animation: loader-logo-in 0.8s ease-out both;
+    }
+
+    &--leaving {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        img {
+            // Drop the entry animation so its held transform doesn't win.
+            animation: none;
+            transform: scale(1.06);
+            transition: transform 0.5s ease;
+        }
     }
   }
-  
+
+  @keyframes loader-logo-in {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
 
   @media (max-width: 450px){
     .loader{
@@ -25,4 +48,11 @@
         }
     }
   }
-  
+
+  @media (prefers-reduced-motion: reduce) {
+    .loader,
+    .loader img {
+        animation: none;
+        transition: none;
+    }
+  }

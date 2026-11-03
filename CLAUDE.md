@@ -19,7 +19,7 @@ Single-page React 18 + Vite app for an ice cream brand marketing site (deployed 
 
 - `src/main.jsx` mounts the app inside `BrowserRouter` and `InfoProvider`, and globally initializes AOS (scroll animations, 1500ms) plus Slick and Boxicons CSS.
 - `src/App.jsx` defines the route table. **All page components are lazy-loaded** via `React.lazy` + `Suspense` (fallback: `PageFallback`). Unknown routes redirect to `/`.
-- App is gated by a `Loader` splash on first mount — `<Loader onDismiss>` must fire before `Header`/`<Routes>`/`Footer` render. Don't bypass this without intent; it's the intro experience.
+- App opens with a `Loader` splash (logo on purple) that dismisses itself — no click. Timing lives in `App.jsx` (`SPLASH_MS` logo, then `FADE_MS` fade-out, kept in sync with the transition in `Loader.scss`); `Header`/`<Routes>`/`Footer` mount when the fade starts, underneath the loader. Don't bypass this without intent; it's the intro experience.
 
 ### State
 

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -29,27 +29,45 @@ const routes = [
   { path: "/dostavka", element: <Delivery /> }
 ];
 
-const App = () => {
-  const [entered, setEntered] = useState(false);
+// Splash timing: the logo shows for SPLASH_MS, then fades out over FADE_MS
+// (keep in sync with the transition in Loader.scss) while the site mounts
+// underneath it.
+const SPLASH_MS = 1200;
+const FADE_MS = 500;
 
-  if (!entered) return <Loader onDismiss={() => setEntered(true)} />;
+const App = () => {
+  // "splash" → "leaving" (site mounted, loader fading) → "done"
+  const [stage, setStage] = useState("splash");
+
+  useEffect(() => {
+    const reveal = setTimeout(() => setStage("leaving"), SPLASH_MS);
+    const done = setTimeout(() => setStage("done"), SPLASH_MS + FADE_MS);
+    return () => {
+      clearTimeout(reveal);
+      clearTimeout(done);
+    };
+  }, []);
 
   return (
-    <div className="body-container">
-      <Header />
-      <main>
-        <Suspense fallback={<PageFallback />}>
-          <Routes>
-            
-            {routes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Suspense>
-      </main>
-      <Footer />
-    </div>
+    <>
+      {stage !== "splash" && (
+        <div className="body-container">
+          <Header />
+          <main>
+            <Suspense fallback={<PageFallback />}>
+              <Routes>
+                {routes.map(({ path, element }) => (
+                  <Route key={path} path={path} element={element} />
+                ))}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+        </div>
+      )}
+      {stage !== "done" && <Loader leaving={stage === "leaving"} />}
+    </>
   );
 };
 

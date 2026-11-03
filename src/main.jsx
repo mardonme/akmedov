@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
@@ -12,11 +13,21 @@ AOS.init({
   duration: 1500
 });
 
+// Agentation feedback toolbar — dev only, stripped from production builds.
+const Agentation = import.meta.env.DEV
+  ? lazy(() => import('agentation').then((m) => ({ default: m.Agentation })))
+  : null;
+
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <InfoProvider>
       <App />
+      {Agentation && (
+        <Suspense fallback={null}>
+          <Agentation />
+        </Suspense>
+      )}
     </InfoProvider>
   </BrowserRouter>,
 )
