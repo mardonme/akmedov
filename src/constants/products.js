@@ -12,6 +12,8 @@ export const catalogSections = [
           { img: "/images/Kreasy5.png", name: "Винтолед полный улёт" },
           { img: "/images/Kreasy6.png", name: "Винтолед Яблоко и лимон" },
           { img: "/images/Kreasy7.png", name: "Винтолед Киви и ананас" },
+          { img: "/images/Kreasy8.png", name: "Крези Джусс вишня" },
+          { img: "/images/Kreasy9.png", name: "Крези Джусс киви" },
         ],
       },
       {
@@ -24,6 +26,14 @@ export const catalogSections = [
         ],
       },
       {
+        subtitle: "Стаканчики",
+        items: [
+          { img: "/images/stakan1.png", name: "«Ахмедов» стаканчик пломбир" },
+          { img: "/images/stakan2.png", name: "«Ахмедов» стаканчик крем-брюле" },
+          { img: "/images/stakan3.png", name: "«Ахмедов» стаканчик кофейный" },
+        ],
+      },
+      {
         subtitle: "БОМБЕЙ",
         items: [
           { img: "/images/Bombey1.png", name: "Бомбей пломбир со сгущёнкой" },
@@ -31,6 +41,7 @@ export const catalogSections = [
           { img: "/images/Bombey3.png", name: "Бомбей пломбир с клубничной начинкой" },
           { img: "/images/Bombey4.png", name: "Бомбей пломбир сэндвич с печеньем" },
           { img: "/images/Bombey5.png", name: "«Кругляшка» эскимо пломбир в глазури с карамельной начинкой" },
+          { img: "/images/Bombey6.png", name: "Бомбей крошка вафельная" },
         ],
       },
       {
@@ -51,6 +62,11 @@ export const catalogSections = [
           { img: "/images/eskimo5.png", name: "«Ахмедов» эскимо в хрустящей тёмной глазури" },
           { img: "/images/eskimo6.png", name: "Прага эскимо пломбир в мягкой глазури" },
           { img: "/images/eskimo7.png", name: "Прага эскимо пломбир в мягкой белой глазури" },
+          { img: "/images/eskimo8.png", name: "Эскимо Париж в глазури" },
+          { img: "/images/eskimo9.png", name: "Рижское эскимо в молочной глазури" },
+          { img: "/images/eskimo10.png", name: "Эскимо Дубай в молочной глазури" },
+          { img: "/images/eskimo11.png", name: "Рижское эскимо в карамельной глазури" },
+          { img: "/images/konfetka1.png", name: "Конфетка белый пломбир" },
         ],
       },
       {

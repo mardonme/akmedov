@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 249345169,
-  "totalWebp": 3306014,
-  "totalFallback": 5897340,
+  "totalOrig": 271539679,
+  "totalWebp": 3623108,
+  "totalFallback": 6584275,
   "images": [
     {
       "file": "choco.png",
@@ -74,6 +74,14 @@
       "webp": 30876,
       "fallback": 71996,
       "from": "1822x4461",
+      "widths": "720"
+    },
+    {
+      "file": "Bombey6.png",
+      "original": 6824645,
+      "webp": 34960,
+      "fallback": 79724,
+      "from": "4000x4000",
       "widths": "720"
     },
     {
@@ -253,6 +261,14 @@
       "widths": "720"
     },
     {
+      "file": "konfetka1.png",
+      "original": 3417689,
+      "webp": 29506,
+      "fallback": 59942,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
       "file": "Сыробушки3.png",
       "original": 3375842,
       "webp": 16648,
@@ -341,6 +357,14 @@
       "widths": "720"
     },
     {
+      "file": "eskimo9.png",
+      "original": 2675599,
+      "webp": 16030,
+      "fallback": 38409,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
       "file": "Kreasy4.png",
       "original": 2647492,
       "webp": 22092,
@@ -349,11 +373,35 @@
       "widths": "720"
     },
     {
+      "file": "eskimo10.png",
+      "original": 2645958,
+      "webp": 18430,
+      "fallback": 40036,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo8.png",
+      "original": 2582891,
+      "webp": 16934,
+      "fallback": 40790,
+      "from": "4000x4000",
+      "widths": "720"
+    },
+    {
       "file": "Сыробушки2.png",
       "original": 2549612,
       "webp": 15530,
       "fallback": 31504,
       "from": "5000x4000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo11.png",
+      "original": 2514156,
+      "webp": 15510,
+      "fallback": 40861,
+      "from": "4000x4000",
       "widths": "720"
     },
     {
@@ -445,6 +493,22 @@
       "widths": "1350"
     },
     {
+      "file": "Kreasy9.png",
+      "original": 453772,
+      "webp": 56106,
+      "fallback": 105786,
+      "from": "563x404",
+      "widths": "563"
+    },
+    {
+      "file": "Kreasy8.png",
+      "original": 448151,
+      "webp": 59470,
+      "fallback": 110797,
+      "from": "564x404",
+      "widths": "564"
+    },
+    {
       "file": "banner9.jpg",
       "original": 402043,
       "webp": 489994,
@@ -531,6 +595,30 @@
       "fallback": 66689,
       "from": "391x1440",
       "widths": "720"
+    },
+    {
+      "file": "stakan3.png",
+      "original": 212704,
+      "webp": 24540,
+      "fallback": 55087,
+      "from": "272x472",
+      "widths": "472"
+    },
+    {
+      "file": "stakan1.png",
+      "original": 212683,
+      "webp": 24610,
+      "fallback": 56843,
+      "from": "274x472",
+      "widths": "472"
+    },
+    {
+      "file": "stakan2.png",
+      "original": 206262,
+      "webp": 20998,
+      "fallback": 58660,
+      "from": "272x472",
+      "widths": "472"
     },
     {
       "file": "abouthed.jpg",
