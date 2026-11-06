@@ -45,7 +45,7 @@ const products = [
   "stakan1", "stakan2", "stakan3",
   "Bombey1", "Bombey2", "Bombey3", "Bombey4", "Bombey5", "Bombey6",
   "eskimo1", "eskimo2", "eskimo3", "eskimo4", "eskimo5", "eskimo6", "eskimo7",
-  "eskimo8", "eskimo9", "eskimo10", "eskimo11", "konfetka1",
+  "eskimo8", "eskimo9", "eskimo10", "eskimo11", "konfetka1", "eskimo12", "eskimo13",
   "pankie2", "pankie3", "pankie4",
   "ves1", "ves2", "ves3", "ves4", "ves5", "ves6",
   "Сыробушки", "Сыробушки1", "Сыробушки2", "Сыробушки3", "Сыробушки4", "Сыробушки5",

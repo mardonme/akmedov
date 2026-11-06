@@ -1,8 +1,8 @@
 {
   "generatedFrom": "scripts/optimize-images.mjs",
-  "totalOrig": 271539679,
-  "totalWebp": 3623108,
-  "totalFallback": 6584275,
+  "totalOrig": 273311116,
+  "totalWebp": 3678514,
+  "totalFallback": 6753533,
   "images": [
     {
       "file": "choco.png",
@@ -426,6 +426,22 @@
       "webp": 21786,
       "fallback": 41981,
       "from": "3000x2000",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo13.png",
+      "original": 888507,
+      "webp": 27384,
+      "fallback": 86806,
+      "from": "560x1321",
+      "widths": "720"
+    },
+    {
+      "file": "eskimo12.png",
+      "original": 882930,
+      "webp": 28022,
+      "fallback": 82452,
+      "from": "562x1324",
       "widths": "720"
     },
     {

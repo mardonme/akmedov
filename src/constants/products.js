@@ -67,6 +67,8 @@ export const catalogSections = [
           { img: "/images/eskimo10.png", name: "Эскимо Дубай в молочной глазури" },
           { img: "/images/eskimo11.png", name: "Рижское эскимо в карамельной глазури" },
           { img: "/images/konfetka1.png", name: "Конфетка белый пломбир" },
+          { img: "/images/eskimo12.png", name: "Мороженое пломбир классический" },
+          { img: "/images/eskimo13.png", name: "Сорбет малиновый" },
         ],
       },
       {
